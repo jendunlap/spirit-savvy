@@ -50,6 +50,19 @@ const updateSign = async (req, res) => {
   }
 }
 
+const deleteSign = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Sign.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Sign deleted')
+    }
+    throw new Error('Sign not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 // USERS
 
 const createUser = async (req, res) => {
@@ -177,6 +190,7 @@ module.exports = {
   getAllSigns,
   getSignById,
   updateSign,
+  deleteSign,
   createUser,
   getAllUsers,
   getUserById,

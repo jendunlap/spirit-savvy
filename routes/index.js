@@ -7,9 +7,13 @@ router.get('/', (req, res) => res.send('HEYYOOOO ROOT ROUTE!'))
 
 router.get('/signs', controllers.getAllSigns)
 
+router.post('/signs', controllers.createSign)
+
 router.get('/signs/:id', controllers.getSignById)
 
 router.put('/signs/:id', controllers.updateSign)
+
+router.delete('/signs/:id', controllers.deleteSign)
 
 router.post('/users', controllers.createUser)
 

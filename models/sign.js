@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const Sign = new Schema(
   {
     name: { type: String, required: true },
-    image: { type: String, required: true },
+    image: { type: String, required: false },
     description: { type: String, required: true }
   },
   { timestamps: true }
