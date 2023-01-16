@@ -7,7 +7,8 @@ const User = new Schema(
     username: { type: String, required: true },
     email: { type: String, required: true },
     passwordDigest: { type: String, required: true },
-    sign: { type: String, required: false }
+    sign: { type: String, required: false },
+    posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }]
   },
   { timestamps: true }
 )
