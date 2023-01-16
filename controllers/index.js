@@ -16,38 +16,41 @@ const createSign = async (req, res) => {
 
 const getAllSigns = async (req, res) => {
   try {
-    const princesses = await Princess.find()
-    return res.status(200).json({ princesses })
+    const signs = await Sign.find()
+    return res.status(200).json({ signs })
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
 
-const getPrincessById = async (req, res) => {
+const getSignById = async (req, res) => {
   try {
     const { id } = req.params
-    const princess = await Princess.findById(id)
-    if (princess) {
-      return res.status(200).json({ princess })
+    const sign = await Sign.findById(id)
+    if (sign) {
+      return res.status(200).json({ sign })
     }
-    return res.status(404).send('The Princess does not exist')
+    return res.status(404).send('The Sign does not exist')
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
 
-const updatePrincess = async (req, res) => {
+const updateSign = async (req, res) => {
   console.log(req.body)
   try {
-    const princess = await Princess.findByIdAndUpdate(req.params.id, req.body, {
+    const sign = await Sign.findByIdAndUpdate(req.params.id, req.body, {
       new: true
     })
-    res.status(200).json(princess)
+    res.status(200).json(sign)
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
 
 module.exports = {
-  createSign
+  createSign,
+  getAllSigns,
+  getSignById,
+  updateSign
 }
