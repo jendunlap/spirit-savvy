@@ -15,6 +15,16 @@ router.put('/signs/:id', controllers.updateSign)
 
 router.delete('/signs/:id', controllers.deleteSign)
 
+router.get('/reviews', controllers.getAllSigns)
+
+router.post('/reviews', controllers.createSign)
+
+router.get('/reviews/:id', controllers.getSignById)
+
+router.put('/reviews/:id', controllers.updateSign)
+
+router.delete('/reviews/:id', controllers.deleteSign)
+
 router.post('/users', controllers.createUser)
 
 router.get('/users', controllers.getAllUsers)

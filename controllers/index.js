@@ -1,6 +1,7 @@
 const Sign = require('../models/sign')
 const User = require('../models/user')
 const Post = require('../models/post')
+const Review = require('../models/review')
 
 // SIGNS
 
@@ -58,6 +59,67 @@ const deleteSign = async (req, res) => {
       return res.status(200).send('Sign deleted')
     }
     throw new Error('Sign not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+// REVIEWS
+
+const createReview = async (req, res) => {
+  try {
+    const review = await new Review(req.body)
+    await review.save()
+    return res.status(201).json({
+      sign
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const getAllReviews = async (req, res) => {
+  try {
+    const reviews = await Review.find()
+    return res.status(200).json({ signs })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getReviewById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const review = await Review.findById(id)
+    if (review) {
+      return res.status(200).json({ sign })
+    }
+    return res.status(404).send('The Review does not exist')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const updateReview = async (req, res) => {
+  console.log(req.body)
+  try {
+    const review = await Review.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).json(review)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const deleteReview = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Review.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Review deleted')
+    }
+    throw new Error('Review not found')
   } catch (error) {
     return res.status(500).send(error.message)
   }
@@ -191,6 +253,11 @@ module.exports = {
   getSignById,
   updateSign,
   deleteSign,
+  createReview,
+  getAllReviews,
+  getReviewById,
+  updateReview,
+  deleteReview,
   createUser,
   getAllUsers,
   getUserById,
