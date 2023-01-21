@@ -15,15 +15,25 @@ router.put('/signs/:id', controllers.updateSign)
 
 router.delete('/signs/:id', controllers.deleteSign)
 
-router.get('/reviews', controllers.getAllSigns)
+router.get('/reviews', controllers.getAllReviews)
 
-router.post('/reviews', controllers.createSign)
+router.post('/reviews', controllers.createReview)
 
-router.get('/reviews/:id', controllers.getSignById)
+router.get('/reviews/:id', controllers.getReviewById)
 
-router.put('/reviews/:id', controllers.updateSign)
+router.put('/reviews/:id', controllers.updateReview)
 
-router.delete('/reviews/:id', controllers.deleteSign)
+router.delete('/reviews/:id', controllers.deleteReview)
+
+router.get('/services', controllers.getAllServices)
+
+router.post('/services', controllers.createService)
+
+router.get('/services/:id', controllers.getServiceById)
+
+router.put('/services/:id', controllers.updateService)
+
+router.delete('/services/:id', controllers.deleteService)
 
 router.post('/users', controllers.createUser)
 

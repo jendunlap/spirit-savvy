@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Review = new Schema(
   {
-    title: { type: String, required: true },
+    title: { type: String, required: false },
     text: { type: String, required: true }
   },
   { timestamps: true }
