@@ -5,6 +5,16 @@ const router = Router()
 
 router.get('/', (req, res) => res.send('HEYYOOOO ROOT ROUTE!'))
 
+router.get('/cards', controllers.getAllCards)
+
+router.post('/cards', controllers.createCard)
+
+router.get('/cards/:id', controllers.getCardById)
+
+router.put('/cards/:id', controllers.updateCard)
+
+router.delete('/cards/:id', controllers.deleteCard)
+
 router.get('/signs', controllers.getAllSigns)
 
 router.post('/signs', controllers.createSign)

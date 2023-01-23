@@ -11,7 +11,6 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/retrograde" element={<Retrograde />} />
         </Routes>
       </main>
     </div>

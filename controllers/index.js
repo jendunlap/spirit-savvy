@@ -3,6 +3,68 @@ const User = require('../models/user')
 const Post = require('../models/post')
 const Review = require('../models/review')
 const Service = require('../models/service')
+const Card = require('../models/card')
+
+// CARD
+
+const createCard = async (req, res) => {
+  try {
+    const card = await new Card(req.body)
+    await card.save()
+    return res.status(201).json({
+      card
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const getAllCards = async (req, res) => {
+  try {
+    const cards = await Card.find()
+    return res.status(200).json({ cards })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getCardById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const card = await Card.findById(id)
+    if (card) {
+      return res.status(200).json({ card })
+    }
+    return res.status(404).send('The Card does not exist')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const updateCard = async (req, res) => {
+  console.log(req.body)
+  try {
+    const card = await Card.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).json(card)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const deleteCard = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Sign.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Sign deleted')
+    }
+    throw new Error('Sign not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
 
 // SIGNS
 
@@ -310,6 +372,11 @@ const deletePost = async (req, res) => {
 }
 
 module.exports = {
+  createCard,
+  getAllCards,
+  getCardById,
+  updateCard,
+  deleteCard,
   createSign,
   getAllSigns,
   getSignById,
