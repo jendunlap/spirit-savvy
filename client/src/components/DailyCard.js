@@ -30,7 +30,14 @@ const DailyCard = () => {
   return (
     <div className="dailyCard">
       {card ? (
-        <img className="dailyCardImage" src={card.image} alt={card.name}></img>
+        <div>
+          <img
+            className="dailyCardImage"
+            src={card.image}
+            alt={card.name}
+          ></img>
+          <p>{card.description}</p>
+        </div>
       ) : null}
     </div>
   )

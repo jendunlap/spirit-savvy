@@ -2,10 +2,12 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
-import Retrograde from './components/Retrograde'
 import Cards from './pages/Cards'
 import CardInfo from './pages/CardInfo'
 import Reviews from './pages/Reviews'
+import About from './pages/About'
+import Services from './pages/Services'
+import ServiceInfo from './pages/ServiceInfo'
 
 const App = () => {
   return (
@@ -17,6 +19,9 @@ const App = () => {
           <Route path="/tarot" element={<Cards />} />
           <Route path="/cards/:cardId" element={<CardInfo />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:servicesId" element={<ServiceInfo />} />
         </Routes>
       </main>
     </div>
