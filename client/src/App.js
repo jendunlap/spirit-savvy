@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Retrograde from './components/Retrograde'
 import Cards from './pages/Cards'
+import CardInfo from './pages/CardInfo'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tarot" element={<Cards />} />
+          <Route path="/cards/:cardId" element={<CardInfo />} />
         </Routes>
       </main>
     </div>

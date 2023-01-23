@@ -28,7 +28,9 @@ const Cards = () => {
       <div className="allCardsCard">
         {cards
           .filter((card) => card.reversed === false)
-          .sort((a, b) => a.number.localeCompare(b.number))
+          .sort((a, b) =>
+            a.number.toString().localeCompare(b.number.toString())
+          )
           .map((card) => (
             <Card
               id={card._id}
