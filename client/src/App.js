@@ -8,6 +8,7 @@ import Reviews from './pages/Reviews'
 import About from './pages/About'
 import Services from './pages/Services'
 import ServiceInfo from './pages/ServiceInfo'
+import Booking from './pages/Booking'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/services/:servicesId" element={<ServiceInfo />} />
         </Routes>
       </main>

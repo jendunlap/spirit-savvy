@@ -8,7 +8,7 @@ const Service = (props) => {
         <h1>{props.name}</h1>
         <h2>{props.time}</h2>
         <h2>{props.price}</h2>
-        <h5>{props.description1}</h5>
+        <h3>{props.description1}</h3>
         <p>{props.description2}</p>
         <p>{props.description3}</p>
       </div>

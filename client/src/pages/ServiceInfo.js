@@ -35,7 +35,7 @@ const ServiceInfo = () => {
           <div className="serviceDescription">
             <h2>{serviceInfo.time}</h2>
             <h2>{serviceInfo.price}</h2>
-            <h5>{serviceInfo.description1}</h5>
+            <h3>{serviceInfo.description1}</h3>
             <p>{serviceInfo.description2}</p>
             <p>{serviceInfo.description3}</p>
           </div>

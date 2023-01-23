@@ -32,11 +32,3 @@ const ReviewCycle = () => {
 }
 
 export default ReviewCycle
-// useEffect(() => {
-//   const getReviews = async () => {
-//     const response = await axios.get(`http://localhost:3001/reviews`)
-//     setReviews(response.data.reviews)
-//     console.log(response.data.reviews)
-//   }
-//   getReviews()
-// }, [])
