@@ -5,7 +5,9 @@ const Card = new Schema(
   {
     name: { type: String, required: true },
     image: { type: String, required: false },
-    description: { type: String, required: true }
+    description: { type: String, required: true },
+    reversed: { type: Boolean },
+    number: { type: Number, required: true }
   },
   { timestamps: true }
 )

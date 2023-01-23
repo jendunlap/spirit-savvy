@@ -1,36 +1,14 @@
-import React from 'react'
-import axios from 'axios'
-import { useState, useEffect } from 'react'
-
-const Card = () => {
-  const [card, setCard] = useState({})
-
-  // useEffect(() => {
-  //   const URL = 'https://rws-cards-api.herokuapp.com/api/v1/cards'
-  //   axios
-  //     .get(URL)
-  //     .then((response) => {
-  //       setCard(response.data)
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  //   console.log(response.data)
-  // }, [])
-
-  return <div>Card</div>
+const Card = (props) => {
+  return (
+    <div className="cardDiv" onClick={() => props.onClick(props.id)}>
+      <div className="infoWrapper">
+        <h1>{props.name}</h1>
+      </div>
+      <div className="imgageWrapper">
+        <img className="cardImage" src={props.image} alt={props.name}></img>
+      </div>
+    </div>
+  )
 }
-
-// const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=${day}`
-// axios
-//   .post(URL)
-//   .then((response) => {
-//     setHoroscope(response.data)
-//   })
-//   .catch((error) => {
-//     console.log(error)
-//   })
-// }, [sign])
-// console.log(horoscope)
 
 export default Card
