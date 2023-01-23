@@ -27,7 +27,10 @@ const CardInfo = () => {
             src={cardInfo.image}
             alt={cardInfo.name}
           ></img>
-          <div className="description">
+          <div className="cardName">
+            <h1>{cardInfo.name}</h1>
+          </div>
+          <div className="cardLongDescription">
             <h5>{cardInfo.longDescription}</h5>
           </div>
         </div>

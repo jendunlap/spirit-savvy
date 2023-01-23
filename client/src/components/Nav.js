@@ -10,6 +10,9 @@ const Nav = () => {
         <Link to="/tarot" className="headerLink">
           TAROT
         </Link>
+        <Link to="/reviews" className="headerLink">
+          REVIEWS
+        </Link>
       </nav>
     </header>
   )

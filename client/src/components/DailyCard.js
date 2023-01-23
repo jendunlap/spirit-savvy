@@ -3,7 +3,12 @@ import { useParams, useNavigate, Navigate } from 'react-router-dom'
 import axios from 'axios'
 
 const DailyCard = () => {
-  let navigate = useNavigate()
+  // let navigate = useNavigate()
+  // let { cardId } = useParams()
+
+  // const viewCard = (id) => {
+  //   navigate(`http://localhost:3001/cards/${id}`)
+  // }
 
   const [card, setCard] = useState()
 
