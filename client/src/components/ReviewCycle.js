@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Review from '../components/Review'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const ReviewCycle = () => {
   const [currentReview, setCurrentReview] = useState(0)
@@ -11,6 +12,12 @@ const ReviewCycle = () => {
     setReviews(response.data.reviews)
     console.log(response.data.reviews)
   }
+
+  const goToReviews = () => {
+    navigate(`/reviews/`)
+  }
+
+  let navigate = useNavigate()
 
   useEffect(() => {
     getReviews()
@@ -25,7 +32,7 @@ const ReviewCycle = () => {
   }, [currentReview, reviews])
 
   return (
-    <div>
+    <div onClick={goToReviews}>
       <Review {...reviews[currentReview]} />
     </div>
   )

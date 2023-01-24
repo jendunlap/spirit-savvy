@@ -10,7 +10,6 @@ body {
 }
 
 .header {
-  /* grid-area: header; */
   grid-column: 1 / span 2;
   grid-row: first / span 1;
   background-color: pink;
@@ -53,11 +52,7 @@ body {
 .homeHoroscopeDiv {
   grid-column: 2 / span 1;
   grid-row: second / span 3;
-  background-color: lavender;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
 }
 
 .homeBookingDiv {
@@ -125,7 +120,6 @@ body {
   .homeHoroscopeDiv {
     grid-column: 3 / span 2;
     grid-row: sixth/ span 4;
-    background-color: lightyellow
   }
   
   .homeBookingDiv {
@@ -147,7 +141,112 @@ body {
   }
 }
 
-/* END MEDIA QUERY */
+/* PAGE GRID LAYOUT */
+
+.pageGrid {
+  display: grid;
+  grid-template-columns: [first] 25vw [second] 25vw [third] 25vw [fourth] 25vw[last-column];
+  grid-template-rows: [first] 23.5vh [second] 23.5vh [third] 23.5vh [fourth] 23.5vh [fifth] 6vh [last-row];
+}
+
+.pageHeader {
+  grid-column: 1 / span 2;
+  grid-row: first / span 1;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagePic {
+  grid-column: 1 / span 2;
+  grid-row: second / span 3;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightyellow;
+}
+
+.pageInfo {
+  grid-column: 3 / span 2;
+  grid-row: first / span 4;
+  background-color: lavender;
+  overflow-y: auto;
+}
+
+.pageRetrogradeDiv {
+  grid-column: 1 / span 4;
+  grid-row: fifth / span 1;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 1220px) {
+  .pageHeader {
+    grid-column: 1 / span 4;
+    grid-row: first / span 1;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagePic {
+    grid-column: 1 / span 2;
+    grid-row: second / span 3;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightyellow;
+  }
+  
+  .pageInfo {
+    grid-column: 3 / span 2;
+    grid-row: second / span 3;
+    background-color: lavender;
+    overflow-y: auto;
+  }
+}
+
+/* HOROSCOPES */
+
+.horoscopeDescription {
+  padding: 20px;
+}
+
+.signButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signButton {
+  width: 100%;
+  height: 4em;
+  border: none;
+  background-color: white
+}
+
+/* DAILY CARD */
+
+.dailyCardDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .headerLinks {
   display: flex
@@ -159,11 +258,24 @@ body {
 /* OTHER */
 
 .dailyCardImage {
-  height: 400px
+  width: 80%
 }
 
 .homePortrait {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.allCardsCard {
+  width: 20%
+}
+
+.pagePic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   object-fit: cover;
 }

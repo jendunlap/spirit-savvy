@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Nav from '../components/Nav'
+import Retrograde from '../components/Retrograde'
 
 const CardInfo = () => {
   let { cardId } = useParams()
@@ -19,25 +21,35 @@ const CardInfo = () => {
   }, [cardId])
 
   return (
-    <div className="cardInfo">
+    <div className="pageGrid">
+      <div className="pageHeader">
+        <Nav />
+      </div>
       {cardInfo ? (
-        <div className="viewInfo">
-          <img
-            className="imageForCard"
-            src={cardInfo.image}
-            alt={cardInfo.name}
-          ></img>
-          <div className="cardName">
+        <div className="pageInfo">
+          <div>
             <h1>{cardInfo.name}</h1>
           </div>
           <div className="cardLongDescription">
             <h5>{cardInfo.longDescription}</h5>
           </div>
+          <button className="backButton" onClick={() => navigate(-1)}>
+            BACK
+          </button>
         </div>
       ) : null}
-      <button className="backButton" onClick={() => navigate(-1)}>
-        BACK
-      </button>
+      {cardInfo ? (
+        <div className="pagePic">
+          <img
+            className="pagePic"
+            src={cardInfo.image}
+            alt={cardInfo.name}
+          ></img>
+        </div>
+      ) : null}
+      <div className="pageRetrogradeDiv">
+        <Retrograde />
+      </div>
     </div>
   )
 }
