@@ -13,7 +13,6 @@ import Booking from './pages/Booking'
 const App = () => {
   return (
     <div className="App">
-      <Nav />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

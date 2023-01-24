@@ -4,9 +4,7 @@ import axios from 'axios'
 
 const DailyCard = () => {
   const [card, setCard] = useState()
-
-  // let navigate = useNavigate()
-  // let { cardId } = useParams()
+  const [displayImage, setDisplayImage] = useState(true)
 
   const getCard = async () => {
     const response = await axios.get(`http://localhost:3001/cards`)
@@ -17,10 +15,6 @@ const DailyCard = () => {
     )
   }
 
-  // const viewCard = (id) => {
-  //   navigate(`/cards/${id}`)
-  // }
-
   useEffect(() => {
     getCard()
   }, [])
@@ -30,13 +24,16 @@ const DailyCard = () => {
   return (
     <div className="dailyCard">
       {card ? (
-        <div>
+        <div className="dailyCardDiv">
           <img
             className="dailyCardImage"
             src={card.image}
             alt={card.name}
+            key={card.name}
           ></img>
-          <p>{card.description}</p>
+          <div className="dailyCardText">
+            <p>{card.description}</p>
+          </div>
         </div>
       ) : null}
     </div>

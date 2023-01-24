@@ -1,7 +1,169 @@
+/* HOME GRID LAYOUT */
+body {
+  margin: 0
+}
+
+.homeGrid {
+  display: grid;
+  grid-template-columns: [first] 25vw [second] 25vw [third] 25vw [fourth] 25vw[last-column];
+  grid-template-rows: [first] 23.5vh [second] 23.5vh [third] 23.5vh [fourth] 23.5vh [fifth] 6vh [last-row];
+}
+
+.header {
+  /* grid-area: header; */
+  grid-column: 1 / span 2;
+  grid-row: first / span 1;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePortraitDiv {
+  grid-column: 3 / span 1;
+  grid-row: first / span 2;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeServicesDiv {
+  grid-column: 4 / span 1;
+  grid-row: first / span 2;
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeCardDiv {
+  grid-column: 1 / span 1;
+  grid-row: second / span 3;
+  background-color: lightyellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeHoroscopeDiv {
+  grid-column: 2 / span 1;
+  grid-row: second / span 3;
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeBookingDiv {
+  grid-column: 3 / span 1;
+  grid-row: third / span 2;
+  background-color: lightyellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeReviewDiv {
+  grid-column: 4 / span 1;
+  grid-row: third / span 2;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeRetrogradeDiv {
+  grid-column: 1 / span 4;
+  grid-row: fifth / span 1;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 1220px) {
+  .homeGrid {
+    display: grid;
+    grid-template-columns: [first] 25vw [second] 25vw [third] 25vw [fourth] 25vw[last-column];
+    grid-template-rows: [first] 20vh [second] 20vh [third] 20vh [fourth] 20vh [fifth] 20vh [sixth] 20vh [seventh] 20vh [eigth] 20vh [ninth] 20vh [tenth] 7vh[last-row];
+  }
+  
+  .header {
+    grid-column: 1 / span 4;
+    grid-row: first / span 1;
+  }
+  
+  .homePortraitDiv {
+    grid-column: 1 / span 2;
+    grid-row: second / span 2;
+    background-color: lightblue
+  }
+  
+  .homeServicesDiv {
+    grid-column: 3 / span 2;
+    grid-row: second / span 2;
+    background-color: lavender
+  }
+  
+  .homeCardDiv {
+    grid-column: 1 / span 2;
+    grid-row: sixth / span 4;
+    background-color: lavender
+  }
+  
+  .homeHoroscopeDiv {
+    grid-column: 3 / span 2;
+    grid-row: sixth/ span 4;
+    background-color: lightyellow
+  }
+  
+  .homeBookingDiv {
+    grid-column: 1 / span 2;
+    grid-row: fourth / span 2;
+    background-color: lightyellow
+  }
+  
+  .homeReviewDiv {
+    grid-column: 3 / span 2;
+    grid-row: fourth / span 2;
+    background-color: pink
+  }
+  
+  .homeRetrogradeDiv {
+    grid-column: 1 / span 4;
+    grid-row: tenth / span 1;
+    background-color: lightblue
+  }
+}
+
+/* END MEDIA QUERY */
+
+.headerLinks {
+  display: flex
+}
+
+.headerLink {
+  padding: 0 20px 0 0
+}
+/* OTHER */
+
 .dailyCardImage {
-  width: 20%
+  height: 400px
 }
 
 .homePortrait {
-  width: 20%
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

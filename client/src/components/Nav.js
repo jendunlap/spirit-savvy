@@ -1,10 +1,19 @@
 import { Link } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Nav = () => {
+  const goToHome = () => {
+    navigate(`/`)
+  }
+
+  let navigate = useNavigate()
+
   return (
     <header className="header">
-      <h1>GET SPIRIT SAVVY BITCHES!!</h1>
-      <nav>
+      <h1 onClick={goToHome} className="homeLink">
+        GET SPIRIT SAVVY BITCHES!!
+      </h1>
+      <nav className="headerLinks">
         <Link to="/" className="headerLink">
           HOME
         </Link>

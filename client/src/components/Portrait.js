@@ -8,12 +8,11 @@ const Portrait = () => {
   let navigate = useNavigate()
 
   return (
-    <div onClick={goToAbout}>
-      <img
-        src="https://i.imgur.com/TzWJA4e.jpeg"
-        className="homePortrait"
-      ></img>
-    </div>
+    <img
+      onClick={goToAbout}
+      src="https://i.imgur.com/TzWJA4e.jpeg"
+      className="homePortrait"
+    ></img>
   )
 }
 
