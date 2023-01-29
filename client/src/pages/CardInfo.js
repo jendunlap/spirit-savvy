@@ -39,9 +39,9 @@ const CardInfo = () => {
         </div>
       ) : null}
       {cardInfo ? (
-        <div className="pagePic">
+        <div className="cardPagePic">
           <img
-            className="pagePic"
+            className="cardPagePic"
             src={cardInfo.image}
             alt={cardInfo.name}
           ></img>

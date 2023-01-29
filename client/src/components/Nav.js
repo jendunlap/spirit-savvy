@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
+import { useState } from 'react'
 
 const Nav = () => {
   const goToHome = () => {
@@ -8,30 +9,66 @@ const Nav = () => {
 
   let navigate = useNavigate()
 
+  const [showDropdown, setShowDropdown] = useState(false)
+
   return (
     <header className="header">
       <h1 onClick={goToHome} className="homeLink">
-        GET SPIRIT SAVVY BITCHES!!
+        Savannah Medium
       </h1>
       <nav className="headerLinks">
-        <Link to="/" className="headerLink">
-          HOME
-        </Link>
-        <Link to="/tarot" className="headerLink">
-          TAROT
-        </Link>
-        <Link to="/services" className="headerLink">
-          SERVICES
-        </Link>
-        <Link to="/booking" className="headerLink">
-          BOOKING
-        </Link>
-        <Link to="/reviews" className="headerLink">
-          REVIEWS
-        </Link>
-        <Link to="/about" className="headerLink">
-          ABOUT
-        </Link>
+        <div
+          className="headerLink"
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
+          MENU
+        </div>
+        {showDropdown && (
+          <div className="dropdown">
+            <Link
+              to="/"
+              className="headerLink"
+              onClick={() => setShowDropdown(false)}
+            >
+              HOME
+            </Link>
+            <Link
+              to="/tarot"
+              className="headerLink"
+              onClick={() => setShowDropdown(false)}
+            >
+              TAROT
+            </Link>
+            <Link
+              to="/services"
+              className="headerLink"
+              onClick={() => setShowDropdown(false)}
+            >
+              SERVICES
+            </Link>
+            <Link
+              to="/booking"
+              className="headerLink"
+              onClick={() => setShowDropdown(false)}
+            >
+              BOOKING
+            </Link>
+            <Link
+              to="/reviews"
+              className="headerLink"
+              onClick={() => setShowDropdown(false)}
+            >
+              REVIEWS
+            </Link>
+            <Link
+              to="/about"
+              className="headerLink"
+              onClick={() => setShowDropdown(false)}
+            >
+              ABOUT
+            </Link>
+          </div>
+        )}
       </nav>
     </header>
   )

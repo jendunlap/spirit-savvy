@@ -8,8 +8,8 @@ const BookingLink = () => {
   let navigate = useNavigate()
 
   return (
-    <div onClick={goToBooking}>
-      <h1>Book</h1>
+    <div className="bookingHome" onClick={goToBooking}>
+      <h1 className="bookingLink">book now</h1>
     </div>
   )
 }

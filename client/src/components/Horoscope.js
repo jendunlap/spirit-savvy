@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 const Horoscope = () => {
   const [sign, setSign] = useState('Aries')
   const [horoscope, setHoroscope] = useState({})
+  const [modalOpen, setModalOpen] = useState(false)
   const signs = [
     'Aries',
     'Taurus',
@@ -35,7 +36,7 @@ const Horoscope = () => {
 
   return (
     <div className="horoscopeDiv">
-      <div className="horoscopeDescription">{horoscope.description}</div>
+      {/* <div className="horoscopeDescription">{horoscope.description}</div> */}
       <form className="signButtons">
         {signs.map((sign) => (
           <input
@@ -43,10 +44,24 @@ const Horoscope = () => {
             type="button"
             name="sign"
             value={sign}
-            onClick={(e) => setSign(e.target.value)}
+            onClick={(e) => {
+              setSign(e.target.value)
+              setModalOpen(true)
+            }}
           />
         ))}
       </form>
+      {modalOpen && (
+        <div className="modal">
+          <div className="horoscopeDescription">{horoscope.description}</div>
+          <button
+            className="horoscopeButton"
+            onClick={() => setModalOpen(false)}
+          >
+            X
+          </button>
+        </div>
+      )}
     </div>
   )
 }

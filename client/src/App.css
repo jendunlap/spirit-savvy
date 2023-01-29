@@ -12,11 +12,18 @@ body {
 .header {
   grid-column: 1 / span 2;
   grid-row: first / span 1;
-  background-color: pink;
+  background-color: #061a1b;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.homeLink {
+  font-family: 'Sacramento', cursive;
+  font-size: 80px;
+  margin: 0;
 }
 
 .homePortraitDiv {
@@ -32,7 +39,27 @@ body {
 .homeServicesDiv {
   grid-column: 4 / span 1;
   grid-row: first / span 2;
-  background-color: lavender;
+  background-color: #061a1b;
+  background-image: url('https://i.imgur.com/y2qqP5l.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicesHome{
+  width: 100%
+}
+
+.servicesLink {
+  font-family: 'Sacramento', cursive;
+  font-size: 80px;
+  height: 80px;
+  color: white;
+  /* background-color: #061a1b; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +69,7 @@ body {
 .homeCardDiv {
   grid-column: 1 / span 1;
   grid-row: second / span 3;
-  background-color: lightyellow;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,13 +79,32 @@ body {
 .homeHoroscopeDiv {
   grid-column: 2 / span 1;
   grid-row: second / span 3;
-  background-color: white;
+  background-color: #061a1b;
 }
 
 .homeBookingDiv {
   grid-column: 3 / span 1;
   grid-row: third / span 2;
-  background-color: lightyellow;
+  background-color: #061a1b;
+  background-image: url('https://i.imgur.com/OnJwWTy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookingHome {
+  width: 100%
+}
+
+.bookingLink {
+  font-family: 'Sacramento', cursive;
+  font-size: 80px;
+  height: 90px;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,7 +114,8 @@ body {
 .homeReviewDiv {
   grid-column: 4 / span 1;
   grid-row: third / span 2;
-  background-color: pink;
+  background-color: #061a1b;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,30 +155,26 @@ body {
   .homeServicesDiv {
     grid-column: 3 / span 2;
     grid-row: second / span 2;
-    background-color: lavender
   }
   
   .homeCardDiv {
-    grid-column: 1 / span 2;
-    grid-row: sixth / span 4;
-    background-color: lavender
+    grid-column: 3 / span 2;
+    grid-row: sixth/ span 4;
   }
   
   .homeHoroscopeDiv {
-    grid-column: 3 / span 2;
-    grid-row: sixth/ span 4;
+    grid-column: 1 / span 2;
+    grid-row: sixth / span 4;
   }
   
   .homeBookingDiv {
     grid-column: 1 / span 2;
     grid-row: fourth / span 2;
-    background-color: lightyellow
   }
   
   .homeReviewDiv {
     grid-column: 3 / span 2;
     grid-row: fourth / span 2;
-    background-color: pink
   }
   
   .homeRetrogradeDiv {
@@ -160,6 +203,17 @@ body {
 }
 
 .pagePic {
+  grid-column: 1 / span 2;
+  grid-row: second / span 3;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightyellow;
+}
+
+.cardPagePic {
   grid-column: 1 / span 2;
   grid-row: second / span 3;
   background-color: pink;
@@ -210,6 +264,17 @@ body {
     align-items: center;
     background-color: lightyellow;
   }
+
+  .cardPagePic {
+    grid-column: 1 / span 2;
+    grid-row: second / span 3;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightyellow;
+  }
   
   .pageInfo {
     grid-column: 3 / span 2;
@@ -232,11 +297,54 @@ body {
   align-items: center;
 }
 
+.horoscopeDiv {
+  width: 100%;
+  height: 100%;
+}
+
 .signButton {
   width: 100%;
-  height: 4em;
+  height: 4.3em;
   border: none;
-  background-color: white
+  background-color: #061a1b;
+  color: white;
+}
+
+@media only screen and (max-width: 1220px) {
+
+.signButton {
+  height: 4.9em;
+}
+
+}
+
+/* HOROSCOPE MODAL */
+
+.horoscopeDiv {
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2;
+}
+
+.horoscopeDescription {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.signButtons {
+  z-index: 1;
 }
 
 /* DAILY CARD */
@@ -255,16 +363,40 @@ body {
 .headerLink {
   padding: 0 20px 0 0
 }
-/* OTHER */
+
+.dailyCardImage {
+  width: 75%
+}
+
+.dailyCardText {
+  width: 80%;
+  margin: 20px 0 0 0;
+}
+
+@media only screen and (max-width: 1220px) {
 
 .dailyCardImage {
   width: 80%
 }
 
+.dailyCardText {
+  width: 80%;
+  margin: 20px 0 0 0;
+}
+
+}
+
+/* OTHER */
+
+
 .homePortrait {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.homeReviews {
+  width: 80%
 }
 
 .allCardsCard {
@@ -276,6 +408,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.cardPagePic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ///////////// */

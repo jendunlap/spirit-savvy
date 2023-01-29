@@ -8,8 +8,8 @@ const ServicesLink = () => {
   let navigate = useNavigate()
 
   return (
-    <div onClick={goToServices}>
-      <h1>Services</h1>
+    <div className="servicesHome" onClick={goToServices}>
+      <h1 className="servicesLink">services</h1>
     </div>
   )
 }

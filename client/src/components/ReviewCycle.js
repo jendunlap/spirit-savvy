@@ -32,7 +32,7 @@ const ReviewCycle = () => {
   }, [currentReview, reviews])
 
   return (
-    <div onClick={goToReviews}>
+    <div className="homeReviews" onClick={goToReviews}>
       <Review {...reviews[currentReview]} />
     </div>
   )
