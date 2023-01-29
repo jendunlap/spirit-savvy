@@ -10,6 +10,7 @@ const Portrait = () => {
   return (
     <img
       onClick={goToAbout}
+      // src="https://i.imgur.com/4HAWH3s.jpg"
       src="https://i.imgur.com/TzWJA4e.jpeg"
       className="homePortrait"
     ></img>

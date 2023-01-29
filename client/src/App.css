@@ -20,16 +20,43 @@ body {
   align-items: center;
 }
 
+.headerDrop {
+  margin: -10px 0 0 0;
+  height: 30%;
+  z-index: 1;
+}
+
 .homeLink {
-  font-family: 'Sacramento', cursive;
-  font-size: 80px;
-  margin: 0;
+  font-family: 'Moon Dance', cursive;
+  font-size: 90px;
+  margin: 240px 0 0 0;
+  /* font-weight: 900; */
+}
+
+.headerLinks {
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
+.headerLink {
+  text-decoration: none;
+  color: white;
+  margin: 23px;
+  font-family: 'Barlow';
+  /* padding: 0 20px 0 0; */
+  transition: .2s;
+}
+
+.headerLink:hover {
+  /* letter-spacing: 5px; */
+  color: #f77c96;
+  transition: .2s
 }
 
 .homePortraitDiv {
   grid-column: 3 / span 1;
   grid-row: first / span 2;
-  background-color: lightblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,19 +78,29 @@ body {
 }
 
 .servicesHome{
-  width: 100%
-}
-
-.servicesLink {
-  font-family: 'Sacramento', cursive;
-  font-size: 80px;
-  height: 80px;
-  color: white;
-  /* background-color: #061a1b; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.servicesHomeImage {
+  width: 35%
+}
+
+.servicesLink {
+  font-family: 'Moon Dance', cursive;
+  font-size: 50px;
+  height: 100%;
+  color: white;
+  margin: 0;
+  transition: .2s
+}
+
+.servicesLink:hover {
+  letter-spacing: 8px;
+  transition: .2s
 }
 
 .homeCardDiv {
@@ -97,18 +134,29 @@ body {
 }
 
 .bookingHome {
-  width: 100%
-}
-
-.bookingLink {
-  font-family: 'Sacramento', cursive;
-  font-size: 80px;
-  height: 90px;
-  color: white;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.bookingHomeImage {
+  width: 35%
+}
+
+.bookingLink {
+  font-family: 'Moon Dance', cursive;
+  font-size: 50px;
+  height: 90px;
+  color: white;
+  margin: 0;
+  transition: .2s
+}
+
+.bookingLink:hover {
+  letter-spacing: 8px;
+  transition: .2s
 }
 
 .homeReviewDiv {
@@ -120,6 +168,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* box-shadow: inset 0px 0px 0px 10px white; */
 }
 
 .homeRetrogradeDiv {
@@ -149,7 +198,6 @@ body {
   .homePortraitDiv {
     grid-column: 1 / span 2;
     grid-row: second / span 2;
-    background-color: lightblue
   }
   
   .homeServicesDiv {
@@ -295,6 +343,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
+  height: 100%
 }
 
 .horoscopeDiv {
@@ -308,13 +358,17 @@ body {
   border: none;
   background-color: #061a1b;
   color: white;
+  font-family: "Barlow", cursive;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 1220px) {
 
-.signButton {
-  height: 4.9em;
-}
+/* .signButton {
+  height: 3.27em;
+} */
 
 }
 
@@ -356,14 +410,6 @@ body {
   align-items: center;
 }
 
-.headerLinks {
-  display: flex
-}
-
-.headerLink {
-  padding: 0 20px 0 0
-}
-
 .dailyCardImage {
   width: 75%
 }
@@ -386,6 +432,44 @@ body {
 
 }
 
+/* HOME REVIEW CYCLE */
+
+.reviewTitle {
+  margin: 0;
+  font-family: 'Moon Dance', cursive;
+  font-size: 50px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.reviewText {
+  font-family: 'Barlow';
+  font-weight: 100;
+  font-size: 18px;
+  margin: 20px 0 0 0;
+  text-align: justify;
+  width: 100%;
+}
+
+.reviewAuthor {
+  font-family: 'Barlow', cursive;
+  font-size: 13px;
+  text-transform: uppercase;
+  /* margin: 0 40px 0 0; */
+  text-align: right;
+}
+
+/* HEADER */
+
+
+
+/* .homeLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
 /* OTHER */
 
 
@@ -393,6 +477,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.homePortrait:hover {
+  content: url('https://i.imgur.com/4HAWH3s.jpg');
 }
 
 .homeReviews {

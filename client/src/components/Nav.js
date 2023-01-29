@@ -14,15 +14,14 @@ const Nav = () => {
   return (
     <header className="header">
       <h1 onClick={goToHome} className="homeLink">
-        Savannah Medium
+        SAVANNAH MEDIUM
       </h1>
       <nav className="headerLinks">
-        <div
-          className="headerLink"
+        <img
+          src="https://i.imgur.com/vf0ltfj.png"
+          className="headerDrop"
           onClick={() => setShowDropdown(!showDropdown)}
-        >
-          MENU
-        </div>
+        ></img>
         {showDropdown && (
           <div className="dropdown">
             <Link

@@ -9,6 +9,10 @@ const BookingLink = () => {
 
   return (
     <div className="bookingHome" onClick={goToBooking}>
+      <img
+        className="bookingHomeImage"
+        src="https://i.imgur.com/gTpwjLB.png"
+      ></img>
       <h1 className="bookingLink">book now</h1>
     </div>
   )
