@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
+import Social from '../components/Social'
 
 const About = () => {
   return (
@@ -35,11 +36,13 @@ const About = () => {
         </p>
       </div>
       <div className="pagePic">
-        {' '}
         <img src="https://i.imgur.com/TzWJA4e.jpeg" className="pagePic"></img>
       </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />
+      </div>
+      <div className="pageSocialDiv">
+        <Social />
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ const Portrait = () => {
     <img
       onClick={goToAbout}
       // src="https://i.imgur.com/4HAWH3s.jpg"
-      src="https://i.imgur.com/TzWJA4e.jpeg"
+      // src="https://i.imgur.com/TzWJA4e.jpeg"
       className="homePortrait"
     ></img>
   )

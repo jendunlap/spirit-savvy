@@ -7,6 +7,7 @@ import ServicesLink from '../components/ServicesLink'
 import Portrait from '../components/Portrait'
 import BookingLink from '../components/BookingLink'
 import Nav from '../components/Nav'
+import Social from '../components/Social'
 
 const Home = () => {
   return (
@@ -34,6 +35,9 @@ const Home = () => {
       </div>
       <div className="homeRetrogradeDiv">
         <Retrograde />
+      </div>
+      <div className="homeSocialDiv">
+        <Social />
       </div>
     </div>
   )
