@@ -3,6 +3,7 @@ import axios from 'axios'
 import Review from '../components/Review'
 import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
+import Social from '../components/Social'
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
@@ -38,9 +39,14 @@ const Reviews = () => {
           ))}
         </div>
       </div>
-      <div className="pagePic">Photo Coming Soon</div>
+      <div className="pagePic">
+        <img src="https://i.imgur.com/4l9uTeP.jpg" className="pagePic"></img>
+      </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />
+      </div>
+      <div className="pageSocialDiv">
+        <Social />
       </div>
     </div>
   )

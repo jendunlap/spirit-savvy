@@ -10,7 +10,8 @@ body {
 }
 
 .header {
-  background-image: url('https://i.imgur.com/Sk4GwKE.jpg');
+  /* background-image: url('https://i.imgur.com/Sk4GwKE.jpg'); */
+  background-color: #061a1b;
   grid-column: 1 / span 2;
   grid-row: first / span 1;
   width: 100%;
@@ -60,14 +61,10 @@ body {
 .homePortraitDiv {
   grid-column: 3 / span 1;
   grid-row: first / span 2;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .homePortrait {
-  background-image: url('https://i.imgur.com/4HAWH3s.jpg');
+  background-image: url('https://i.imgur.com/TzWJA4e.jpeg');
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -78,7 +75,7 @@ body {
 }
 
 .homePortrait:hover {
-  background-image: url('https://i.imgur.com/TzWJA4e.jpeg');
+  background-image: url('https://i.imgur.com/4HAWH3s.jpg');
   transition: .2s;
 }
 
@@ -226,13 +223,13 @@ body {
     grid-template-rows: [first] 20vh [second] 20vh [third] 20vh [fourth] 20vh [fifth] 20vh [sixth] 20vh [seventh] 20vh [eigth] 20vh [ninth] 20vh [tenth] 7vh [eleventh] 7vh [last-row];
   }
 
-  .homePortrait {
+  /* .homePortrait {
     background-image: url('https://i.imgur.com/TzWJA4e.jpeg');
   }
   
   .homePortrait:hover {
     background-image: url('https://i.imgur.com/4HAWH3s.jpg');
-  }
+  } */
   
   .header {
     grid-column: 1 / span 4;
@@ -312,6 +309,23 @@ body {
   align-items: center;
 }
 
+.pageAbout {
+  font-family: 'Moon Dance', cursive;
+  font-size: 100px;
+  margin: 18px 0 50px 0;
+  color: #f77c96;
+  width: 100%;
+  text-align: center;
+}
+
+.pageInfo, .pageInfoP {
+  font-family: 'Barlow';
+  font-size: 25px;
+  text-align: justify;
+  padding: 0 100px;
+  color: #061a1b
+}
+
 .pagePic {
   grid-column: 1 / span 2;
   grid-row: second / span 3;
@@ -337,8 +351,9 @@ body {
 .pageInfo {
   grid-column: 3 / span 2;
   grid-row: first / span 4;
-  background-color: lavender;
+  background-color: white;
   overflow-y: auto;
+  padding: 20px;
 }
 
 .pageRetrogradeDiv {
@@ -379,6 +394,20 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  .pageInfo {
+    grid-column: 3 / span 2;
+    grid-row: second / span 3;
+    padding: 0px;
+  }
+
+  .pageInfo, .pageInfoP {
+    font-family: 'Barlow';
+    font-size: 25px;
+    text-align: justify;
+    padding: 0 10px;
+    color: #061a1b
+  }
   
   .pagePic {
     grid-column: 1 / span 2;
@@ -399,14 +428,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightyellow;
+  }
+
+  .pageAbout {
+    font-family: 'Moon Dance', cursive;
+    font-size: 60px;
+    margin: 0;
+    color: #f77c96;
+    width: 100%;
+    text-align: right;
   }
   
-  .pageInfo {
-    grid-column: 3 / span 2;
-    grid-row: second / span 3;
-    background-color: lavender;
-    overflow-y: auto;
+  .pageInfo, .pageInfoP {
+    font-family: 'Barlow';
+    font-size: 18px;
+    text-align: justify;
   }
 
   .pageRetrogradeDiv {
@@ -467,10 +503,6 @@ body {
 }
 
 @media only screen and (max-width: 1220px) {
-
-/* .signButton {
-  height: 3.27em;
-} */
 
 }
 
