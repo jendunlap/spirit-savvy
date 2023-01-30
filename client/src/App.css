@@ -29,6 +29,8 @@ body {
   margin: -10px 0 0 0;
   height: 30%;
   z-index: 1;
+  /* background-color: #f77c96;
+  border-radius: 50px; */
 }
 
 .homeLink {
@@ -302,7 +304,6 @@ body {
 .pageHeader {
   grid-column: 1 / span 2;
   grid-row: first / span 1;
-  background-color: pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -316,6 +317,7 @@ body {
   color: #f77c96;
   width: 100%;
   text-align: center;
+  line-height: 80px;
 }
 
 .pageInfo, .pageInfoP {
@@ -329,23 +331,20 @@ body {
 .pagePic {
   grid-column: 1 / span 2;
   grid-row: second / span 3;
-  background-color: pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightyellow;
 }
 
 .cardPagePic {
   grid-column: 1 / span 2;
   grid-row: second / span 3;
-  background-color: pink;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightyellow;
 }
 
 .pageInfo {
@@ -375,6 +374,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* SERVICES */
+
+.servicePrice, .serviceTime {
+  margin: 0;
+  font-family: 'barlow';
+  width: 100%;
+  text-align: center
+}
+
+.servicePrice {
+  font-size: 22px;
+}
+
+.serviceTagline {
+  font-weight: bold;
+  text-transform: uppercase
 }
 
 /* MEDIA QUERY */
@@ -412,18 +429,16 @@ body {
   .pagePic {
     grid-column: 1 / span 2;
     grid-row: second / span 3;
-    background-color: pink;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightyellow;
   }
 
   .cardPagePic {
     grid-column: 1 / span 2;
     grid-row: second / span 3;
-    background-color: pink;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -437,6 +452,8 @@ body {
     color: #f77c96;
     width: 100%;
     text-align: right;
+    line-height: 40px;
+    padding: 20px 0;
   }
   
   .pageInfo, .pageInfoP {
@@ -459,6 +476,26 @@ body {
     grid-column: 1 / span 4;
     grid-row: sixth / span 1;
   }
+
+  /* SERVICES */
+
+  .servicePrice, .serviceTime {
+    margin: 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  .servicePrice, .serviceTime {
+    margin: 0;
+    font-family: 'barlow';
+    width: 100%;
+    text-align: right;
+  }
+  
+  .servicePrice {
+    font-size: 22px;
+  }
+
 }
 
 /* HOROSCOPES */
@@ -484,7 +521,7 @@ body {
 
 .signButton {
   width: 100%;
-  height: 4.3em;
+  height: 7em;
   border: none;
   background-color: #061a1b;
   color: white;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
+import Social from '../components/Social'
 
 const Booking = () => {
   const [calendar, setCalendar] = useState(false)
@@ -25,9 +26,14 @@ const Booking = () => {
           style={{ minWidth: '320px', height: '630px' }}
         ></div>
       </div>
-      <div className="pagePic">Photo Coming Soon</div>
+      <div className="pagePic">
+        <img src="https://i.imgur.com/gSall5r.jpg" className="pagePic"></img>
+      </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />
+      </div>
+      <div className="pageSocialDiv">
+        <Social />
       </div>
     </div>
   )

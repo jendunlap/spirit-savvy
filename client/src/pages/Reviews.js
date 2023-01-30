@@ -30,11 +30,11 @@ const Reviews = () => {
               <Review
                 id={review._id}
                 key={review._id}
-                title={review.title}
-                snippet={review.snippet}
-                author={review.author}
+                // snippet={review.snippet}
               />
-              <p>{review.text}</p>
+              <h1 className="pageAbout">{review.title}</h1>
+              <p className="pageInfoP">{review.text}</p>
+              <p className="reviewAuthor">- {review.author}</p>
             </div>
           ))}
         </div>
