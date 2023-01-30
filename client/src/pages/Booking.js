@@ -10,8 +10,8 @@ const Booking = () => {
     const script = document.createElement('script')
     script.src = 'https://assets.calendly.com/assets/external/widget.js'
     script.async = true
-    script.onload = () => setCalendar(true)
     document.body.appendChild(script)
+    setCalendar(true)
   }, [])
 
   return (
@@ -20,11 +20,13 @@ const Booking = () => {
         <Nav />
       </div>
       <div className="pageInfo">
-        <div
-          className="calendly"
-          data-url="https://calendly.com/savannahmedium?hide_landing_page_details=1&hide_gdpr_banner=1"
-          style={{ minWidth: '320px', height: '630px' }}
-        ></div>
+        {calendar && (
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/savannahmedium?hide_landing_page_details=1&hide_gdpr_banner=1"
+            style={{ minWidth: '320px', height: '630px' }}
+          ></div>
+        )}
       </div>
       <div className="pagePic">
         <img src="https://i.imgur.com/gSall5r.jpg" className="pagePic"></img>
