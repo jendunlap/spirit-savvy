@@ -24,7 +24,7 @@ const Booking = () => {
           <div
             className="calendly-inline-widget"
             data-url="https://calendly.com/savannahmedium?hide_landing_page_details=1&hide_gdpr_banner=1"
-            style={{ minWidth: '320px', height: '630px' }}
+            style={{ minWidth: '320px', height: '100%' }}
           ></div>
         )}
       </div>
