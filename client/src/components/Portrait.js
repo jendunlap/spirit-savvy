@@ -7,14 +7,7 @@ const Portrait = () => {
 
   let navigate = useNavigate()
 
-  return (
-    <img
-      onClick={goToAbout}
-      // src="https://i.imgur.com/4HAWH3s.jpg"
-      // src="https://i.imgur.com/TzWJA4e.jpeg"
-      className="homePortrait"
-    ></img>
-  )
+  return <div onClick={goToAbout} className="homePortraitDiv"></div>
 }
 
 export default Portrait

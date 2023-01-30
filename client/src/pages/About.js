@@ -14,7 +14,7 @@ const About = () => {
         <p className="pageInfoP">
           YeYe is a psychic medium intuitive coach based in Savannah, Georgia.
         </p>
-        <p className="pageInfoP">
+        <p className="pageInfoP pageInfoAbout">
           With more than 30 years of spiritual experience and five years working
           in mental health, YeYe combines ancestral psychic mediumship with
           spiritual wellness by connecting to ancestors and people who have
@@ -22,12 +22,12 @@ const About = () => {
           and groups to hone and harness their intuitive abilities through
           coaching to navigate important transitions in their lives.
         </p>
-        <p className="pageInfoP">
+        <p className="pageInfoP pageInfoAbout">
           Specializing in psychic mediumship, one-on-one coaching, and intuitive
           natal charts, YeYe offers indigenous insights as an Iyanifa - a
           priestess of a tradition going back tens of thousands of years.
         </p>
-        <p className="pageInfoP">
+        <p className="pageInfoP pageInfoAbout">
           By focusing on authenticity, compassion, and honesty, YeYe also
           provides healing, clarity and insight through tarot and astrology. Her
           non-judgmental, compassionate, and down to earth approach sprinkled
