@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
+import Social from '../components/Social'
 
 const CardInfo = () => {
   let { cardId } = useParams()
@@ -28,10 +29,10 @@ const CardInfo = () => {
       {cardInfo ? (
         <div className="pageInfo">
           <div>
-            <h1>{cardInfo.name}</h1>
+            <h1 className="pageAbout">{cardInfo.name}</h1>
           </div>
           <div className="cardLongDescription">
-            <h5>{cardInfo.longDescription}</h5>
+            <h5 className="pageInfoP">{cardInfo.longDescription}</h5>
           </div>
           <button className="backButton" onClick={() => navigate(-1)}>
             BACK
@@ -49,6 +50,9 @@ const CardInfo = () => {
       ) : null}
       <div className="pageRetrogradeDiv">
         <Retrograde />
+      </div>
+      <div className="pageSocialDiv">
+        <Social />
       </div>
     </div>
   )

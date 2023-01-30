@@ -26,18 +26,16 @@ body {
 }
 
 .headerDrop {
-  margin: -10px 0 0 0;
+  margin: -20px 0 0 0;
   height: 30%;
   z-index: 1;
-  /* background-color: #f77c96;
-  border-radius: 50px; */
+  border-radius: 50px;
 }
 
 .homeLink {
   font-family: 'Moon Dance', cursive;
   font-size: 90px;
-  margin: 190px 0 0 0;
-  /* color: #f77c96; */
+  margin: 250px 0 0 0;
 }
 
 .headerLinks {
@@ -224,14 +222,6 @@ body {
     grid-template-columns: [first] 25vw [second] 25vw [third] 25vw [fourth] 25vw[last-column];
     grid-template-rows: [first] 20vh [second] 20vh [third] 20vh [fourth] 20vh [fifth] 20vh [sixth] 20vh [seventh] 20vh [eigth] 20vh [ninth] 20vh [tenth] 7vh [eleventh] 7vh [last-row];
   }
-
-  /* .homePortrait {
-    background-image: url('https://i.imgur.com/TzWJA4e.jpeg');
-  }
-  
-  .homePortrait:hover {
-    background-image: url('https://i.imgur.com/4HAWH3s.jpg');
-  } */
   
   .header {
     grid-column: 1 / span 4;
@@ -243,7 +233,7 @@ body {
   .homeLink {
     font-family: 'Moon Dance', cursive;
     font-size: 90px;
-    margin: 250px 0 0 0;
+    margin: 320px 0 0 0;
     padding: 0 0 15px 0;
   }
   
@@ -312,20 +302,21 @@ body {
 
 .pageAbout {
   font-family: 'Moon Dance', cursive;
-  font-size: 100px;
-  margin: 18px 0 50px 0;
+  font-size: 80px;
+  margin: 18px 0;
   color: #f77c96;
-  width: 100%;
   text-align: center;
   line-height: 80px;
+  padding: 10px
 }
 
-.pageInfo, .pageInfoP {
+.pageInfoP {
   font-family: 'Barlow';
-  font-size: 25px;
+  font-size: 20px;
   text-align: justify;
-  padding: 0 100px;
-  color: #061a1b
+  padding: 20px 100px 0 100px;
+  color: #061a1b;
+  margin: 0;
 }
 
 .pagePic {
@@ -345,6 +336,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.cardPageImage {
+  width: 500%
 }
 
 .pageInfo {
@@ -387,6 +382,7 @@ body {
 
 .servicePrice {
   font-size: 22px;
+  color:#f77c96;
 }
 
 .serviceTagline {
@@ -418,7 +414,7 @@ body {
     padding: 0px;
   }
 
-  .pageInfo, .pageInfoP {
+.pageInfoP {
     font-family: 'Barlow';
     font-size: 25px;
     text-align: justify;
@@ -450,10 +446,9 @@ body {
     font-size: 60px;
     margin: 0;
     color: #f77c96;
-    width: 100%;
     text-align: right;
     line-height: 40px;
-    padding: 20px 0;
+    padding: 20px;
   }
   
   .pageInfo, .pageInfoP {
@@ -476,6 +471,10 @@ body {
     grid-column: 1 / span 4;
     grid-row: sixth / span 1;
   }
+
+  /* .cardPageImage {
+    width: 50%
+  } */
 
   /* SERVICES */
 
@@ -529,7 +528,7 @@ body {
   font-size: 20px;
   text-transform: uppercase;
   border: 1px solid white;
-  z-index: 1;
+  z-index: 2;
   transition: .2s;
 }
 
@@ -556,7 +555,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #061a1b;
-  z-index: 2;
+  z-index: 3;
   border: 2px solid white;
   box-sizing: border-box;
 }
@@ -567,7 +566,7 @@ body {
   left: 50%;
   width: 80%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 4;
 }
 
 .horoscopeDescription {
@@ -651,6 +650,11 @@ body {
   text-align: right;
 }
 
+.reviewAuthorMain {
+  font-size: 20px;
+  margin: 0
+}
+
 /* SOCIAL */
 
 .socialLinks {
@@ -699,6 +703,16 @@ body {
   align-items: center;
   height: 100%;
   object-fit: cover;
+}
+
+.backButton {
+  width: 100% ;
+  border: none;
+  font-family: 'barlow';
+  font-size: 20px;
+  height: 40px;
+  color: white;
+  background-color:#061a1b;
 }
 
 /* ///////////// */

@@ -4,6 +4,7 @@ import axios from 'axios'
 import Card from '../components/Card'
 import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
+import Social from '../components/Social'
 
 const Cards = () => {
   const [cards, setCards] = useState([])
@@ -38,20 +39,33 @@ const Cards = () => {
               a.number.toString().localeCompare(b.number.toString())
             )
             .map((card) => (
-              <Card
-                id={card._id}
-                key={card._id}
-                reversed={card.reversed}
-                image={card.image}
-                name={card.name}
-                onClick={viewCard}
-              />
+              <div>
+                <Card
+                  id={card._id}
+                  key={card._id}
+                  reversed={card.reversed}
+                  onClick={viewCard}
+                />
+                <h1 className="pageAbout" onClick={() => viewCard(card._id)}>
+                  {card.name}
+                </h1>
+                <img
+                  src={card.image}
+                  className="cardPageImage"
+                  onClick={() => viewCard(card._id)}
+                ></img>
+              </div>
             ))}
         </div>
       </div>
-      <div className="pagePic">Photo Coming Soon</div>
+      <div className="pagePic">
+        <img src="https://i.imgur.com/c8eYcHX.jpg" className="pagePic"></img>
+      </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />
+      </div>
+      <div className="pageSocialDiv">
+        <Social />
       </div>
     </div>
   )

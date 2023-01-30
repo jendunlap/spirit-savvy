@@ -27,14 +27,10 @@ const Reviews = () => {
         <div className="allReviewsReview">
           {reviews.map((review) => (
             <div>
-              <Review
-                id={review._id}
-                key={review._id}
-                // snippet={review.snippet}
-              />
+              <Review id={review._id} key={review._id} />
               <h1 className="pageAbout">{review.title}</h1>
               <p className="pageInfoP">{review.text}</p>
-              <p className="reviewAuthor">- {review.author}</p>
+              <p className="reviewAuthor reviewAuthorMain">- {review.author}</p>
             </div>
           ))}
         </div>
