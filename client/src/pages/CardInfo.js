@@ -11,7 +11,7 @@ const CardInfo = () => {
   const [cardInfo, setCardInfo] = useState(null)
 
   const getCardInfo = async () => {
-    const response = await axios.get(`http://localhost:3001/cards/${cardId}`)
+    const response = await axios.get(`/cards/${cardId}`)
     setCardInfo(response.data.card)
   }
 

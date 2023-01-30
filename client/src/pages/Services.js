@@ -13,7 +13,7 @@ const Services = () => {
   let { servicesId } = useParams()
 
   const getServices = async () => {
-    const response = await axios.get(`http://localhost:3001/services`)
+    const response = await axios.get(`/services`)
     setServices(response.data.services)
     console.log(response.data.services)
   }

@@ -9,7 +9,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([])
 
   const getReviews = async () => {
-    const response = await axios.get(`http://localhost:3001/reviews`)
+    const response = await axios.get(`/reviews`)
     setReviews(response.data.reviews)
     console.log(response.data.reviews)
   }

@@ -13,7 +13,7 @@ const Cards = () => {
   let { cardsId } = useParams()
 
   const getCards = async () => {
-    const response = await axios.get(`http://localhost:3001/cards`)
+    const response = await axios.get(`/cards`)
     setCards(response.data.cards)
     console.log(response.data.cards)
   }
