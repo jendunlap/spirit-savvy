@@ -315,6 +315,10 @@ body {
   text-align: justify;
   padding: 20px 100px 0 100px;
   color: #061a1b;
+  /* margin: 0; */
+}
+
+.pageInfoAbout {
   padding: 10px 0;
 }
 
@@ -547,7 +551,7 @@ body {
   position: relative;
 }
 
-.modal {
+.horoscopeModal {
   position: absolute;
   top: 0;
   left: 0;
@@ -564,6 +568,10 @@ body {
   top: 50%;
   left: 50%;
   width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translate(-50%, -50%);
   z-index: 4;
 }

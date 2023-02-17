@@ -52,14 +52,13 @@ const Horoscope = () => {
         ))}
       </form>
       {modalOpen && (
-        <div className="modal">
-          <div className="horoscopeDescription">{horoscope.description}</div>
-          <button
-            className="horoscopeButton"
+        <div className="horoscopeModal">
+          <div
+            className="horoscopeDescription"
             onClick={() => setModalOpen(false)}
           >
-            X
-          </button>
+            {horoscope.description}
+          </div>
         </div>
       )}
     </div>
