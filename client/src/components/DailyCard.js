@@ -36,6 +36,7 @@ const DailyCard = () => {
           ></img>
           {modalOpen && (
             <div className="cardModal">
+              {/* <div className="dailyCardName">{card.name}</div> */}
               <div
                 className="dailyCardText"
                 onClick={() => setModalOpen(false)}

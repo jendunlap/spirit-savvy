@@ -34,7 +34,7 @@ body {
 }
 
 .homeLink {
-  font-family: 'Moon Dance', cursive;
+  font-family: 'Amarante', cursive;
   /* font-size: 90px; */
   margin: 300px 0 0 0;
 }
@@ -231,7 +231,7 @@ body {
   }
 
   .homeLink {
-    font-family: 'Moon Dance', cursive;
+    font-family: 'Amarante', cursive;
     font-size: 90px;
     margin: 320px 0 0 0;
     padding: 0 0 15px 0;
@@ -607,7 +607,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -633,21 +633,21 @@ body {
 
 .dailyCardText {
   font-family: "barlow";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-  
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 4;
 }
 
 .dailyCardImage {
-  /* position: absolute; */
   width: 100%;
   height: 100%;
   object-fit: cover;
