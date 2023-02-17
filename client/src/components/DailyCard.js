@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const DailyCard = () => {
   const [card, setCard] = useState()
-  const [displayImage, setDisplayImage] = useState(true)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const getCard = async () => {
     const response = await axios.get(`/cards`)
@@ -30,10 +30,20 @@ const DailyCard = () => {
             src={card.image}
             alt={card.name}
             key={card.name}
+            onClick={(e) => {
+              setModalOpen(true)
+            }}
           ></img>
-          <div className="dailyCardText">
-            <p>{card.description}</p>
-          </div>
+          {modalOpen && (
+            <div className="cardModal">
+              <div
+                className="dailyCardText"
+                onClick={() => setModalOpen(false)}
+              >
+                {card.description}
+              </div>
+            </div>
+          )}
         </div>
       ) : null}
     </div>

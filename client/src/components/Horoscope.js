@@ -36,7 +36,6 @@ const Horoscope = () => {
 
   return (
     <div className="horoscopeDiv">
-      {/* <div className="horoscopeDescription">{horoscope.description}</div> */}
       <form className="signButtons">
         {signs.map((sign) => (
           <input

@@ -128,7 +128,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%
+  height: 100%;
+  width: 100%;
 }
 
 .homeHoroscopeDiv {
@@ -549,6 +550,7 @@ body {
 
 .horoscopeDiv {
   position: relative;
+  box-sizing: border-box;
 }
 
 .horoscopeModal {
@@ -601,32 +603,61 @@ body {
 
 /* DAILY CARD */
 
-.dailyCardDiv {
-  display: flex;
+.dailyCard {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+    display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  overflow-y: auto;
+  background-color: #f0e6be;
 }
 
-.dailyCardImage {
-  width: 75%;
+.dailyCardDiv {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cardModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0e6be;
+  z-index: 3;
+  box-sizing: border-box;
 }
 
 .dailyCardText {
-  width: 75%;
-  margin: 0;
   font-family: "barlow";
-  text-align: justify;
-  font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  
+}
+
+.dailyCardImage {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 1220px) {
 
-.dailyCardImage {
+/* .dailyCardImage {
   width: 80%
-}
+} */
 
 }
 
