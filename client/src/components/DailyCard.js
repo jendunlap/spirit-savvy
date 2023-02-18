@@ -6,6 +6,9 @@ const DailyCard = () => {
   const [card, setCard] = useState()
   const [modalOpen, setModalOpen] = useState(false)
 
+  let navigate = useNavigate()
+  let { cardsId } = useParams()
+
   const getCard = async () => {
     const response = await axios.get(`/cards`)
     setCard(
@@ -13,6 +16,10 @@ const DailyCard = () => {
         Math.floor(Math.random() * response.data.cards.length)
       ]
     )
+  }
+
+  const viewCard = (id) => {
+    navigate(`/cards/${id}`)
   }
 
   useEffect(() => {
@@ -36,12 +43,18 @@ const DailyCard = () => {
           ></img>
           {modalOpen && (
             <div className="cardModal">
-              {/* <div className="dailyCardName">{card.name}</div> */}
               <div
                 className="dailyCardText"
                 onClick={() => setModalOpen(false)}
               >
-                {card.description}
+                <p className="dailyCardName">{card.name}</p>
+                <p className="dailyCardDescrption">{card.description}</p>
+                <button
+                  className="dailyCardButton"
+                  onClick={() => viewCard(card._id)}
+                >
+                  More Info
+                </button>
               </div>
             </div>
           )}

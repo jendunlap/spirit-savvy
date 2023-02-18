@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^1.2.2",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
@@ -8,7 +9,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.8.3",
     "morgan": "^1.10.0",
-    "react-router-dom": "^6.6.2"
+    "react-animated-css": "^1.2.1",
+    "react-router-dom": "^6.6.2",
+    "react-spring": "^9.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
