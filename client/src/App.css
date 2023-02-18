@@ -633,7 +633,7 @@ body {
 
 .dailyCardText {
   font-family: "barlow";
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -641,10 +641,26 @@ body {
   width: 80%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: translate(-50%, -50%);
   z-index: 4;
+}
+
+.dailyCardName {
+  font-family: "Amarante";
+  font-size: 70px;
+  margin: 0;
+}
+
+.dailyCardButton {
+  background-color:#f77c96;
+  color: white;
+  border: none;
+  font-family: "Amarante";
+  font-size: 20px;
+  padding: 10px;
 }
 
 .dailyCardImage {

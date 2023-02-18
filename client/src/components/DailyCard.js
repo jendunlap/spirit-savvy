@@ -53,7 +53,7 @@ const DailyCard = () => {
                   className="dailyCardButton"
                   onClick={() => viewCard(card._id)}
                 >
-                  More Info
+                  Learn More About {card.name}
                 </button>
               </div>
             </div>
