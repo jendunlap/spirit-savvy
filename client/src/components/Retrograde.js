@@ -17,12 +17,12 @@ const Retrograde = () => {
   }, [])
 
   return (
-    <div>
+    <div className="retrogradeQuestion">
       {isRetrograde ? (
-        <p>"Is Mercury Retrograde? Yep, that must be why everything sucks"</p>
+        <p>IS MERCURY RETROGRADE? Yep, that must be why everything sucks</p>
       ) : (
         <p>
-          "Is Mercury Retrograde? Nope, something else must be bumming you out"
+          IS MERCURY RETROGRADE? Nope, something else must be bumming you out
         </p>
       )}
     </div>
