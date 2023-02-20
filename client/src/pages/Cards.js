@@ -31,7 +31,7 @@ const Cards = () => {
       <div className="pageHeader">
         <Nav />
       </div>
-      <div className="pageInfo">
+      <div className="cardsPageInfo">
         <div className="allCardsCard">
           {cards
             .filter((card) => card.reversed === false)
@@ -46,9 +46,9 @@ const Cards = () => {
                   reversed={card.reversed}
                   onClick={viewCard}
                 />
-                <h1 className="pageAbout" onClick={() => viewCard(card._id)}>
+                {/* <h1 className="pageAbout" onClick={() => viewCard(card._id)}>
                   {card.name}
-                </h1>
+                </h1> */}
                 <img
                   src={card.image}
                   className="cardPageImage"
@@ -58,8 +58,11 @@ const Cards = () => {
             ))}
         </div>
       </div>
-      <div className="pagePic">
-        <img src="https://i.imgur.com/c8eYcHX.jpg" className="pagePic"></img>
+      <div className="cardsPagePic">
+        <img
+          src="https://i.imgur.com/Bq6DwpZ.png"
+          className="cardsPagePic"
+        ></img>
       </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />

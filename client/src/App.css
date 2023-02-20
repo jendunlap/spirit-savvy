@@ -334,6 +334,17 @@ body {
   align-items: center;
 }
 
+.cardsPagePic {
+  grid-column: 1 / span 2;
+  grid-row: second / span 3;
+  background-color: #872a22;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .cardPagePic {
   grid-column: 1 / span 2;
   grid-row: second / span 3;
@@ -345,7 +356,8 @@ body {
 }
 
 .cardPageImage {
-  width: 500%
+  width: 250%;
+  border-radius: 20px;
 }
 
 .pageInfo {
@@ -356,10 +368,20 @@ body {
   padding: 20px;
 }
 
+.cardsPageInfo {
+  grid-column: 3 / span 2;
+  grid-row: first / span 4;
+  background-color: #a9bba6;
+  overflow-y: auto;
+  padding: 0 20px;
+  /* width: 100%;
+  height: 100%; */
+}
+
 .pageRetrogradeDiv {
   grid-column: 1 / span 2;
   grid-row: fifth / span 1;
-  background-color: #f77c96;
+  background-color: #b54338;
   font-family: "barlow";
   color: white;
   display: flex;
@@ -375,6 +397,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f0e6be;
 }
 
 /* SERVICES */
@@ -418,6 +441,16 @@ body {
     grid-column: 3 / span 2;
     grid-row: second / span 3;
     padding: 0px;
+  }
+
+  .cardsPageInfo {
+    grid-column: 3 / span 2;
+    grid-row: second / span 3;
+  }
+
+  .cardPageImage {
+    width: 410%;
+    border-radius: 20px;
   }
 
 .pageInfoP {
@@ -466,7 +499,7 @@ body {
   .pageRetrogradeDiv {
     grid-column: 1 / span 4;
     grid-row: fifth / span 1;
-    background-color: #f77c96;
+    background-color: #b54338;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -730,6 +763,19 @@ body {
   width: 40%;
 }
 
+/* ALL CARDS PAGE */
+
+/* .cardsPagePic {
+  grid-column: 1 / span 2;
+  grid-row: second / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  object-fit: cover;
+  
+} */
 
 /* OTHER */
 
@@ -738,7 +784,11 @@ body {
 }
 
 .allCardsCard {
-  width: 20%
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagePic {
