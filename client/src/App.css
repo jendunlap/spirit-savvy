@@ -193,7 +193,6 @@ body {
   grid-row: fifth / span 1;
   background-color: #b54338;
   font-family: "barlow";
-  font-size: 20px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -273,8 +272,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    text-align: center;
   }
 
   .homeSocialDiv {
@@ -351,6 +348,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .pageSocialDiv {
