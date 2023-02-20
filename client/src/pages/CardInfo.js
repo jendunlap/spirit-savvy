@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
 import Social from '../components/Social'
 
-const CardInfo = () => {
+const CardInfo = ({ cards, selectedCardIndex }) => {
   let { cardId } = useParams()
 
   const [cardInfo, setCardInfo] = useState(null)
@@ -17,6 +17,22 @@ const CardInfo = () => {
 
   let navigate = useNavigate()
 
+  const previous = () => {
+    const previousCardIndex = selectedCardIndex - 1
+    if (previousCardIndex >= 0) {
+      const previousCard = cards[previousCardIndex]
+      navigate(`/cards/${previousCard.id}`)
+    }
+  }
+
+  const next = () => {
+    const nextCardIndex = selectedCardIndex + 1
+    if (nextCardIndex >= 0) {
+      const nextCard = cards[nextCardIndex]
+      navigate(`/cards/${nextCard.id}`)
+    }
+  }
+
   useEffect(() => {
     getCardInfo()
   }, [cardId])
@@ -27,9 +43,15 @@ const CardInfo = () => {
         <Nav />
       </div>
       {cardInfo ? (
-        <div className="pageInfo">
+        <div className="cardPageInfo">
           <div>
-            <h1 className="pageAbout">{cardInfo.name}</h1>
+            <h1 className="cardPageAbout">{cardInfo.name}</h1>
+            {/* <button className="previousButton" onClick={previous}>
+              Previous
+            </button>
+            <button className="nextButton" onClick={next}>
+              Next
+            </button> */}
           </div>
           <div className="cardLongDescription">
             <h5 className="pageInfoP">{cardInfo.longDescription}</h5>
@@ -37,9 +59,11 @@ const CardInfo = () => {
             <h5 className="pageInfoP">{cardInfo.longDescription3}</h5>
             <h5 className="pageInfoP">{cardInfo.longDescription4}</h5>
           </div>
-          <button className="backButton" onClick={() => navigate(-1)}>
-            BACK
-          </button>
+          <div className="backButtonContainer">
+            <button className="backButton" onClick={() => navigate(-1)}>
+              BACK
+            </button>
+          </div>
         </div>
       ) : null}
       {cardInfo ? (

@@ -10,14 +10,12 @@ body {
 }
 
 .header {
-  /* background-image: url('https://i.imgur.com/Sk4GwKE.jpg'); */
   background-color:#324e5a;
   grid-column: 1 / span 2;
   grid-row: first / span 1;
   width: 100%;
   height: 100%;
   background-size: cover;
-  /* background-color: #061a1b; */
   color:#f0e6be;
   display: flex;
   flex-direction: column;
@@ -208,7 +206,7 @@ body {
 .homeSocialDiv {
   grid-column: 3 / span 2;
   grid-row: fifth / span 1;
-  background-color:#f0e6be;
+  background-color:#edbd5a;
   font-family: "barlow";
   color: black;
   display: flex;
@@ -317,8 +315,9 @@ body {
   font-size: 20px;
   text-align: justify;
   padding: 20px 100px 0 100px;
-  color: #061a1b;
-  /* margin: 0; */
+  color:#324e5a;
+  padding: 0 50px;
+
 }
 
 .pageInfoAbout {
@@ -334,35 +333,6 @@ body {
   align-items: center;
 }
 
-.cardsPagePic {
-  grid-column: 1 / span 2;
-  grid-row: second / span 3;
-  background-color: #a9bba6;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-height: 100%;
-  max-width: 100%
-}
-
-.cardPagePic {
-  grid-column: 1 / span 2;
-  grid-row: second / span 3;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  max-height: 100%
-}
-
-.cardPageImage {
-  width: 50%;
-  border-radius: 20px;
-}
-
 .pageInfo {
   grid-column: 3 / span 2;
   grid-row: first / span 4;
@@ -371,23 +341,8 @@ body {
   padding: 20px;
 }
 
-.cardPageName {
-  margin: 5px 0 0 0;
-  font-family: Amarante;
-  font-size: 30px;
-  color:#324e5a;
-}
-
-.cardsPageInfo {
-  grid-column: 3 / span 2;
-  grid-row: first / span 4;
-  background-color: #f0e6be;
-  overflow-y: auto;
-  padding: 0 20px;
-}
-
 .pageRetrogradeDiv {
-  grid-column: 3 / span 2;
+  grid-column: 1 / span 2;
   grid-row: fifth / span 1;
   background-color: #b54338;
   font-family: "barlow";
@@ -399,13 +354,13 @@ body {
 }
 
 .pageSocialDiv {
-  grid-column: 1 / span 2;
+  grid-column: 3 / span 2;
   grid-row: fifth / span 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0e6be;
+  background-color: #edbd5a;
 }
 
 /* SERVICES */
@@ -451,22 +406,12 @@ body {
     padding: 0px;
   }
 
-  .cardsPageInfo {
-    grid-column: 3 / span 2;
-    grid-row: second / span 3;
-  }
-
-  .cardPageImage {
-    width: 80%;
-    border-radius: 20px;
-  }
-
 .pageInfoP {
     font-family: 'Barlow';
     font-size: 25px;
     text-align: justify;
     padding: 0 10px;
-    color: #061a1b
+    color:#324e5a
   }
   
   .pagePic {
@@ -476,18 +421,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .cardPagePic {
-    grid-column: 1 / span 2;
-    grid-row: second / span 3;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    max-height: 100%
   }
 
   .pageAbout {
@@ -540,6 +473,111 @@ body {
     font-size: 22px;
   }
 
+}
+
+/* ALL CARDS */
+
+.cardsPagePic {
+  grid-column: 1 / span 2;
+  grid-row: second / span 3;
+  background-color: #a9bba6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%
+}
+
+.cardsPageImage {
+  width: 50%;
+  border-radius: 20px;
+}
+
+.cardsPageName {
+  margin: 5px 0 0 0;
+  font-family: Amarante;
+  font-size: 30px;
+  color:#324e5a;
+}
+
+.cardsPageInfo {
+  grid-column: 3 / span 2;
+  grid-row: first / span 4;
+  background-color: #f0e6be;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+/* ALL CARDS MEDIA QUERY */
+
+@media only screen and (max-width: 1220px) {
+
+.cardsPageInfo {
+  grid-column: 3 / span 2;
+  grid-row: second / span 3;
+  font-family: 'Barlow';
+  font-size: 18px;
+  text-align: justify;
+}
+
+.cardsPageImage {
+  width: 80%;
+  border-radius: 20px;
+}
+
+}
+
+/* CARD INFO PAGE */
+
+.cardPagePic {
+  grid-column: 1 / span 2;
+  grid-row: second / span 3;
+  background-color:#a9bba6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%
+}
+
+.cardPageNameTBD {
+  margin: 5px 0 0 0;
+  font-family: Amarante;
+  font-size: 30px;
+  color:#324e5a;
+}
+
+.cardPageInfo {
+  grid-column: 3 / span 2;
+  grid-row: first / span 4;
+  background-color: #f0e6be;
+  overflow-y: auto;
+  /* padding: 0 20px; */
+}
+
+.cardPageAbout {
+  font-family: 'Amarante', cursive;
+  font-size: 80px;
+  margin: 18px 0;
+  color:#872a22;
+  text-align: center;
+  line-height: 80px;
+}
+
+/* CARD INFO PAGE MEDIA QUERY */
+
+@media only screen and (max-width: 1220px) {
+  .cardPageInfo {
+    grid-column: 3 / span 2;
+    grid-row: second / span 3;
+  }
+  
+  .cardsPageImageTBD {
+    width: 80%;
+    border-radius: 20px;
+  }
 }
 
 /* HOROSCOPES */
@@ -769,20 +807,6 @@ body {
   width: 40%;
 }
 
-/* ALL CARDS PAGE */
-
-/* .cardsPagePic {
-  grid-column: 1 / span 2;
-  grid-row: second / span 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%; 
-  object-fit: cover;
-  
-} */
-
 /* OTHER */
 
 .homeReviews {
@@ -808,25 +832,25 @@ body {
   object-fit: cover;
 }
 
-.cardPagePic {
+.backButtonContainer {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 100%
 }
 
 .backButton {
-  width: 100% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  font-family: 'barlow';
-  font-size: 20px;
-  height: 40px;
+  font-family: 'amarante';
+  font-size: 30px;
+  padding: 10px 20px;
   color: white;
-  background-color:#061a1b;
+  background-color:#324e5a;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
 }
 
 .retrogradeQuestion {
