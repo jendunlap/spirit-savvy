@@ -48,7 +48,7 @@ body {
 
 .headerLink {
   text-decoration: none;
-  color:#324e5a;
+  color:#f0e6be;
   margin: 23px;
   font-family: 'Barlow';
   transition: .2s;
@@ -56,7 +56,7 @@ body {
 
 .headerLink:hover {
   /* letter-spacing: 5px; */
-  color:#f0e6be;
+  color:#f0e6be8a;
   transition: .2s
 }
 
@@ -229,7 +229,6 @@ body {
   .header {
     grid-column: 1 / span 4;
     grid-row: first / span 1;
-    background-color: #061a1b;
     background-image: none;
   }
 

@@ -33,6 +33,9 @@ const CardInfo = () => {
           </div>
           <div className="cardLongDescription">
             <h5 className="pageInfoP">{cardInfo.longDescription}</h5>
+            <h5 className="pageInfoP">{cardInfo.longDescription2}</h5>
+            <h5 className="pageInfoP">{cardInfo.longDescription3}</h5>
+            <h5 className="pageInfoP">{cardInfo.longDescription4}</h5>
           </div>
           <button className="backButton" onClick={() => navigate(-1)}>
             BACK

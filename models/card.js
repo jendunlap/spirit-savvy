@@ -8,7 +8,11 @@ const Card = new Schema(
     description: { type: String, required: true },
     reversed: { type: Boolean },
     number: { type: Number, required: true },
-    longDescription: { type: String, required: false }
+    longDescription: { type: String, required: false },
+    longDescription2: { type: String, required: false },
+    longDescription3: { type: String, required: false },
+    longDescription4: { type: String, required: false },
+    longDescription5: { type: String, required: false }
   },
   { timestamps: true }
 )

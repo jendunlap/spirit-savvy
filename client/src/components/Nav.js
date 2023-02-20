@@ -18,7 +18,7 @@ const Nav = () => {
       </h1>
       <nav className="headerLinks">
         <img
-          src="https://i.imgur.com/P7JUJkq.jpg"
+          src="https://i.imgur.com/s8R9vAs.jpg"
           className="headerDrop"
           onClick={() => setShowDropdown(!showDropdown)}
         ></img>
