@@ -80,10 +80,10 @@ body {
 .homeServicesDiv {
   grid-column: 4 / span 1;
   grid-row: first / span 2;
-  background-color:#e59188;
-  background-image: url('https://i.imgur.com/R6lkVTl.png');
+  background-color:#b54338;
+  background-image: url('https://i.imgur.com/O5CHAnT.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   max-height: 100%;
   background-position: center;
   display: flex;
@@ -140,10 +140,10 @@ body {
 .homeBookingDiv {
   grid-column: 3 / span 1;
   grid-row: third / span 2;
-  background-color:#e59188;
-  background-image: url('https://i.imgur.com/UbksiP0.png');
+  background-color:#b54338;
+  background-image: url('https://i.imgur.com/cPHasxj.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -174,13 +174,13 @@ body {
 .homeBookingDiv:hover .bookingLink {
   letter-spacing: 8px;
   transition: .2s;
-  color: ##f0e6be8a;
+  color: #f0e6be8a;
 }
 
 .homeReviewDiv {
   grid-column: 4 / span 1;
   grid-row: third / span 2;
-  background-color:#324e5a;
+  background-color:#a9bba6;
   color: white;
   display: flex;
   flex-direction: column;
@@ -758,27 +758,32 @@ body {
 
 .reviewTitle {
   margin: 0;
-  font-family: 'Moon Dance', cursive;
+  font-family: 'amarante', cursive;
   font-size: 50px;
   line-height: 45px;
   text-align: center;
+  color:#f0e6be;
 }
 
 .reviewText {
   font-family: 'Barlow';
   font-weight: 100;
-  font-size: 18px;
+  font-size: 22px;
   margin: 20px 0 0 0;
   text-align: justify;
   width: 100%;
+  color:#f0e6be;
+  font-weight: bold;
+  /* font-style: italic; */
 }
 
 .reviewAuthor {
   font-family: 'Barlow', cursive;
-  font-size: 13px;
+  font-size: 15px;
   text-transform: uppercase;
-  color: #f77c96;
+  color:#324e5a;
   text-align: right;
+  font-style: italic;
 }
 
 .reviewAuthorMain {
