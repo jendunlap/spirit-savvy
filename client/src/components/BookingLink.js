@@ -9,11 +9,11 @@ const BookingLink = () => {
 
   return (
     <div className="bookingHome" onClick={goToBooking}>
-      <img
+      {/* <img
         className="bookingHomeImage"
-        src="https://i.imgur.com/gTpwjLB.png"
-      ></img>
-      <h1 className="bookingLink">book now</h1>
+        src="https://i.imgur.com/UbksiP0.png"
+      ></img> */}
+      <h1 className="bookingLink">BOOK NOW</h1>
     </div>
   )
 }

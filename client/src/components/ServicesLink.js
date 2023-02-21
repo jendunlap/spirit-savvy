@@ -9,11 +9,11 @@ const ServicesLink = () => {
 
   return (
     <div className="servicesHome" onClick={goToServices}>
-      <img
+      {/* <img
         className="servicesHomeImage"
         src="https://i.imgur.com/QGfA4DS.png"
-      ></img>
-      <h1 className="servicesLink">services</h1>
+      ></img> */}
+      <h1 className="servicesLink">SERVICES</h1>
     </div>
   )
 }
