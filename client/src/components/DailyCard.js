@@ -47,7 +47,7 @@ const DailyCard = () => {
                 className="dailyCardText"
                 onClick={() => setModalOpen(false)}
               >
-                <p className="dailyCardName">{card.name}</p>
+                <p className="dailyCardName">{card.name.toUpperCase()}</p>
                 <p className="dailyCardDescrption">{card.description}</p>
                 <button
                   className="dailyCardButton"

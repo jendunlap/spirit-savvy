@@ -36,19 +36,7 @@ const Horoscope = () => {
     '#384d59'
   ]
 
-  useEffect(() => {
-    const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=Today`
-    axios
-      .post(URL)
-      .then((response) => {
-        setHoroscope(response.data)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }, [sign])
-
-  const getBackgroundColor = (sign) => {
+  const backgroundColor = (sign) => {
     switch (sign) {
       case 'Aries':
         return '#cd6d59'
@@ -79,6 +67,18 @@ const Horoscope = () => {
     }
   }
 
+  useEffect(() => {
+    const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=Today`
+    axios
+      .post(URL)
+      .then((response) => {
+        setHoroscope(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }, [sign])
+
   return (
     <div className="horoscopeDiv">
       <form className="signButtons">
@@ -99,14 +99,16 @@ const Horoscope = () => {
       {modalOpen && (
         <div
           className="horoscopeModal"
-          style={{ background: getBackgroundColor(sign) }}
+          style={{ background: backgroundColor(sign) }}
         >
-          {/* <div>{horoscope.name}</div> */}
           <div
-            className="horoscopeDescription"
+            className="horoscopeDescriptionDiv"
             onClick={() => setModalOpen(false)}
           >
-            {horoscope.description}
+            <div className="horoscopeSign">
+              YOUR DAILY {sign.toUpperCase()} HOROSCOPE
+            </div>
+            <div className="horoscopeDescription">{horoscope.description}</div>
           </div>
         </div>
       )}
