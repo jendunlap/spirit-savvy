@@ -674,9 +674,9 @@ body {
 
 .horoscopeDescription {
   font-family: "barlow";
-  text-align: justify;
+  text-align: center;
   font-size: 30px; 
-  color: white;
+  color:#f0e6be;
 }
 
 .horoscopeButton {
@@ -747,17 +747,18 @@ body {
   font-family: "Amarante";
   font-size: 70px;
   line-height: 50px;
-  color: #872a22;
+  color:#cd6d59;
   margin: 0;
 }
 
 .dailyCardButton {
   background-color:#324e5a;
-  color: white;
+  color:#f0e6be;
   border: none;
   font-family: "Amarante";
   font-size: 20px;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .dailyCardImage {

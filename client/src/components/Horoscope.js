@@ -47,7 +47,37 @@ const Horoscope = () => {
         console.log(error)
       })
   }, [sign])
-  console.log(horoscope)
+
+  const getBackgroundColor = (sign) => {
+    switch (sign) {
+      case 'Aries':
+        return '#cd6d59'
+      case 'Taurus':
+        return '#de8968'
+      case 'Gemini':
+        return '#da8750'
+      case 'Cancer':
+        return '#e2a65c'
+      case 'Leo':
+        return '#e5be6a'
+      case 'Virgo':
+        return '#bfa355'
+      case 'Libra':
+        return '#9d9d66'
+      case 'Scorpio':
+        return '#a7a783'
+      case 'Sagittarius':
+        return '#acbaa8'
+      case 'Capricorn':
+        return '#90a1a5'
+      case 'Aquarius':
+        return '#6a7985'
+      case 'Pisces':
+        return '#384d59'
+      default:
+        return '#000000'
+    }
+  }
 
   return (
     <div className="horoscopeDiv">
@@ -67,7 +97,11 @@ const Horoscope = () => {
         ))}
       </form>
       {modalOpen && (
-        <div className="horoscopeModal">
+        <div
+          className="horoscopeModal"
+          style={{ background: getBackgroundColor(sign) }}
+        >
+          {/* <div>{horoscope.name}</div> */}
           <div
             className="horoscopeDescription"
             onClick={() => setModalOpen(false)}
