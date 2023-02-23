@@ -69,7 +69,7 @@ const CardInfo = ({ cards, selectedCardIndex }) => {
       {cardInfo ? (
         <div className="cardPagePic">
           <img
-            className="cardPagePic"
+            className="cardPagePic2"
             src={cardInfo.image}
             alt={cardInfo.name}
           ></img>

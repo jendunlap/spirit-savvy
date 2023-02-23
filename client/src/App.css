@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-  background-color:#324e5a;
+  background-color:#384d59;
   grid-column: 1 / span 2;
   grid-row: first / span 1;
   width: 100%;
@@ -81,9 +81,9 @@ body {
   grid-column: 4 / span 1;
   grid-row: first / span 2;
   background-color:#b54338;
-  background-image: url('https://i.imgur.com/O5CHAnT.png');
+  background-image: url('https://i.imgur.com/eVLp9WQ.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   max-height: 100%;
   background-position: center;
   display: flex;
@@ -108,15 +108,19 @@ body {
   font-family: 'amarante', cursive;
   font-size: 50px;
   height: 100%;
-  color:#f0e6be;
+  color: #de8968;
+  background-color:#f0e6be;
+  text-align: center;
+  width: 100%;
   margin: 0;
+  padding: 10px 0;
   transition: .2s
 }
 
 .homeServicesDiv:hover .servicesLink {
   letter-spacing: 8px;
   transition: .2s;
-  color: #f0e6be8a;
+  color:#324e5a;
 }
 
 .homeCardDiv {
@@ -141,9 +145,9 @@ body {
   grid-column: 3 / span 1;
   grid-row: third / span 2;
   background-color:#b54338;
-  background-image: url('https://i.imgur.com/cPHasxj.png');
+  background-image: url('https://i.imgur.com/n9KylcQ.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -166,7 +170,11 @@ body {
 .bookingLink {
   font-family: 'amarante', cursive;
   font-size: 50px;
-  color:#f0e6be;
+  color: #de8968;
+  background-color:#f0e6be;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
   margin: 0;
   transition: .2s
 }
@@ -174,13 +182,13 @@ body {
 .homeBookingDiv:hover .bookingLink {
   letter-spacing: 8px;
   transition: .2s;
-  color: #f0e6be8a;
+  color: #324e5a;
 }
 
 .homeReviewDiv {
   grid-column: 4 / span 1;
   grid-row: third / span 2;
-  background-color:#a9bba6;
+  background-color:#acbaa8;
   color: white;
   display: flex;
   flex-direction: column;
@@ -191,21 +199,22 @@ body {
 .homeRetrogradeDiv {
   grid-column: 1 / span 2;
   grid-row: fifth / span 1;
-  background-color: #b54338;
+  background-color: #cd6d59;
   font-family: "barlow";
-  color: white;
+  color:#f0e6be;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .homeSocialDiv {
   grid-column: 3 / span 2;
   grid-row: fifth / span 1;
-  background-color:#edbd5a;
+  background-color:#384d59;
   font-family: "barlow";
   color: black;
   display: flex;
@@ -312,7 +321,7 @@ body {
   font-size: 20px;
   text-align: justify;
   padding: 20px 100px 0 100px;
-  color:#324e5a;
+  color:#384d59;
   padding: 0 50px;
 
 }
@@ -341,15 +350,16 @@ body {
 .pageRetrogradeDiv {
   grid-column: 1 / span 2;
   grid-row: fifth / span 1;
-  background-color: #b54338;
+  background-color: #cd6d59;
   font-family: "barlow";
-  color: white;
+  color:#f0e6be;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .pageSocialDiv {
@@ -359,7 +369,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #edbd5a;
+  background-color: #384d59;
 }
 
 /* SERVICES */
@@ -441,7 +451,7 @@ body {
   .pageRetrogradeDiv {
     grid-column: 1 / span 4;
     grid-row: fifth / span 1;
-    background-color: #b54338;
+    background-color: #cd6d59;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -476,16 +486,24 @@ body {
 
 /* ALL CARDS */
 
-.cardsPagePic {
+.cardsPagePic, .cardsPagePic2 {
   grid-column: 1 / span 2;
   grid-row: second / span 3;
-  background-color: #a9bba6;
+  /* background-color: #a9bba6; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-height: 100%;
   max-width: 100%
+}
+
+.cardsPagePic {
+  background-image: url("https://i.imgur.com/ZOUwMd5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  background-position: center;
 }
 
 .cardsPageImage {
@@ -529,23 +547,25 @@ body {
 
 /* CARD INFO PAGE */
 
-.cardPagePic {
+.cardPagePic, .cardPagePic2 {
   grid-column: 1 / span 2;
   grid-row: second / span 3;
-  background-color:#a9bba6;
+  background-image: url("https://i.imgur.com/ZOUwMd5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   max-height: 100%;
   max-width: 100%
 }
 
-.cardPageNameTBD {
-  margin: 5px 0 0 0;
-  font-family: Amarante;
-  font-size: 30px;
-  color:#324e5a;
+.cardPagePic2 {
+  border-radius: 40px;
 }
 
 .cardPageInfo {
@@ -560,7 +580,7 @@ body {
   font-family: 'Amarante', cursive;
   font-size: 80px;
   margin: 18px 0;
-  color:#872a22;
+  color:#cd6d59;
   text-align: center;
   line-height: 80px;
 }
@@ -851,21 +871,31 @@ body {
   font-family: 'amarante';
   font-size: 30px;
   padding: 10px 20px;
-  color: white;
-  background-color:#324e5a;
+  color:#f0e6be;
+  background-color:#384d59;
   border-radius: 5px;
   margin: 0 0 20px 0;
 }
 
-.retrogradeQuestion {
+.retrogradeAnswer {
   position: relative;
   white-space: nowrap;
   overflow: hidden;
   animation: marquee 10s linear infinite;
   display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
 }
 
-/* @keyframes marquee {
+.retrogradeTitle {
+  font-family: "amarante";
+  font-size: 25px;
+  padding: 0 5px;
+}
+
+@keyframes marquee {
   0% {
     transform: translateX(100%);
   }
@@ -873,10 +903,5 @@ body {
     transform: translateX(-100%);
   }
 }
-
-.retrogradeQuestion span{
-  display: inline-block;
-  padding-right: 100%;
-} */
 
 /* ///////////// */

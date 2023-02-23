@@ -59,7 +59,7 @@ const Cards = () => {
       <div className="cardsPagePic">
         <img
           src="https://i.imgur.com/Bq6DwpZ.png"
-          className="cardsPagePic"
+          className="cardsPagePic2"
         ></img>
       </div>
       <div className="pageRetrogradeDiv">
