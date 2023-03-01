@@ -21,6 +21,8 @@ router.post('/signs', controllers.createSign)
 
 router.get('/signs/:id', controllers.getSignById)
 
+router.get('/signs/name/:name', controllers.getSignByName)
+
 router.put('/signs/:id', controllers.updateSign)
 
 router.delete('/signs/:id', controllers.deleteSign)

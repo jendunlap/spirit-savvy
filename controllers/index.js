@@ -102,6 +102,19 @@ const getSignById = async (req, res) => {
   }
 }
 
+const getSignByName = async (req, res) => {
+  try {
+    const { name } = req.params
+    const sign = await Sign.findOne({ name })
+    if (sign) {
+      return res.status(200).json({ sign })
+    }
+    return res.status(404).send('The Sign does not exist')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const updateSign = async (req, res) => {
   console.log(req.body)
   try {
@@ -380,6 +393,7 @@ module.exports = {
   createSign,
   getAllSigns,
   getSignById,
+  getSignByName,
   updateSign,
   deleteSign,
   createReview,
