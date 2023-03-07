@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import Signs from './pages/Signs'
+import SignInfo from './pages/SignInfo'
 import Cards from './pages/Cards'
 import CardInfo from './pages/CardInfo'
 import Reviews from './pages/Reviews'
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/tarot" element={<Cards />} />
           <Route path="/horoscope" element={<Signs />} />
-          <Route path="/horoscope/:horoscopeId" element={<Signs />} />
+          <Route path="/signs/:signId" element={<SignInfo />} />
           <Route path="/cards/:cardId" element={<CardInfo />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/about" element={<About />} />

@@ -592,6 +592,12 @@ body {
   line-height: 80px;
 }
 
+.signPageDates {
+  font-family: 'Amarante', cursive;
+  color:#324e5a;
+  text-align: center;
+}
+
 /* CARD INFO PAGE MEDIA QUERY */
 
 @media only screen and (max-width: 1220px) {

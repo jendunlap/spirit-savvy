@@ -6,36 +6,21 @@ import Retrograde from '../components/Retrograde'
 import Social from '../components/Social'
 
 const SignInfo = ({ signs, selectedSignIndex }) => {
-  let { horoscopeId } = useParams()
+  let { signId } = useParams()
 
   const [signInfo, setSignInfo] = useState(null)
 
   const getSignInfo = async () => {
-    const response = await axios.get(`/horoscope/${horoscopeId}`)
-    setSignInfo(response.data.card)
+    const response = await axios.get(`/signs/${signId}`)
+    setSignInfo(response.data.sign)
+    console.log(response.data.sign)
   }
 
   let navigate = useNavigate()
 
-  // const previous = () => {
-  //   const previousCardIndex = selectedCardIndex - 1
-  //   if (previousCardIndex >= 0) {
-  //     const previousCard = cards[previousCardIndex]
-  //     navigate(`/cards/${previousCard.id}`)
-  //   }
-  // }
-
-  // const next = () => {
-  //   const nextCardIndex = selectedCardIndex + 1
-  //   if (nextCardIndex >= 0) {
-  //     const nextCard = cards[nextCardIndex]
-  //     navigate(`/cards/${nextCard.id}`)
-  //   }
-  // }
-
   useEffect(() => {
     getSignInfo()
-  }, [horoscopeId])
+  }, [signId])
 
   return (
     <div className="pageGrid">
@@ -46,12 +31,6 @@ const SignInfo = ({ signs, selectedSignIndex }) => {
         <div className="cardPageInfo">
           <div>
             <h1 className="cardPageAbout">{signInfo.name}</h1>
-            {/* <button className="previousButton" onClick={previous}>
-              Previous
-            </button>
-            <button className="nextButton" onClick={next}>
-              Next
-            </button> */}
             <h2 className="signPageDates">{signInfo.dates}</h2>
           </div>
           <div className="cardLongDescription">

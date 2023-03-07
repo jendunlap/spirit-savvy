@@ -10,7 +10,7 @@ const Signs = () => {
   const [signs, setSigns] = useState([])
 
   let navigate = useNavigate()
-  let { horoscopeId } = useParams()
+  let { signsId } = useParams()
 
   const getSigns = async () => {
     const response = await axios.get(`/signs`)
@@ -19,12 +19,12 @@ const Signs = () => {
   }
 
   const viewSign = (id) => {
-    navigate(`/horoscope/${id}`)
+    navigate(`/signs/${id}`)
   }
 
   useEffect(() => {
     getSigns()
-  }, [horoscopeId])
+  }, [signsId])
 
   return (
     <div className="pageGrid">
