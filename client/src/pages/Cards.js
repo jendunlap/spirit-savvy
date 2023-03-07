@@ -58,7 +58,7 @@ const Cards = () => {
       </div>
       <div className="cardsPagePic">
         <img
-          src="https://i.imgur.com/Bq6DwpZ.png"
+          src="https://i.imgur.com/i8ommXT.jpg"
           className="cardsPagePic2"
         ></img>
       </div>

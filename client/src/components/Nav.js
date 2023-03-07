@@ -39,6 +39,13 @@ const Nav = () => {
               TAROT
             </Link>
             <Link
+              to="/horoscope"
+              className="headerLink"
+              onClick={() => setShowDropdown(false)}
+            >
+              HOROSCOPE
+            </Link>
+            <Link
               to="/services"
               className="headerLink"
               onClick={() => setShowDropdown(false)}

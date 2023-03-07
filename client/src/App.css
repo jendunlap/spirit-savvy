@@ -498,6 +498,10 @@ body {
   padding: 20px;
 }
 
+.cardsPagePic2 {
+  border-radius: 50px;
+}
+
 .cardsPagePic {
   background-image: url("https://i.imgur.com/ZOUwMd5.jpg");
   background-repeat: no-repeat;
