@@ -19,7 +19,7 @@ const Signs = () => {
   }
 
   const viewSign = (id) => {
-    navigate(`/signs/${id}`)
+    navigate(`/horoscope/${id}`)
   }
 
   useEffect(() => {

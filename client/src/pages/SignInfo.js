@@ -11,7 +11,7 @@ const SignInfo = ({ signs, selectedSignIndex }) => {
   const [signInfo, setSignInfo] = useState(null)
 
   const getSignInfo = async () => {
-    const response = await axios.get(`/signs/${horoscopeId}`)
+    const response = await axios.get(`/horoscope/${horoscopeId}`)
     setSignInfo(response.data.card)
   }
 
