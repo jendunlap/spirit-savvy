@@ -6,6 +6,7 @@ const Sign = new Schema(
     name: { type: String, required: true },
     image: { type: String, required: false },
     number: { type: Number, required: true },
+    dates: { type: String, required: false },
     description1: { type: String, required: false },
     description2: { type: String, required: false },
     description3: { type: String, required: false },
