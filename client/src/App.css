@@ -810,18 +810,41 @@ body {
   font-family: "Amarante";
   font-size: 50px;
   line-height: 50px;
-  color:#cd6d59;
+  color:#de8968;
   margin: 0;
 }
 
 .dailyCardButton {
-  background-color:#324e5a;
+  background-color:#f0e6be;
+  color:#de8968;
+  border: none;
+  font-family: "Amarante";
+  font-size: 25px;
+  /* padding: 20px; */
+  border-radius: 20px;
+}
+
+.dailyCardButton:hover {
+  letter-spacing: .5px;
+  color: #a7a783;
+  transition: .2s;
+}
+
+.dailyHoroscopeButton {
+  background-color:hsla(48, 62%, 84%, 0);
   color:#f0e6be;
   border: none;
   font-family: "Amarante";
-  font-size: 20px;
-  padding: 20px;
+  font-size: 25px;
+  /* padding: 20px; */
   border-radius: 20px;
+  transition: .2s;
+}
+
+.dailyHoroscopeButton:hover {
+  letter-spacing: .5px;
+  color: #f0e6be8a;
+  transition: .2s;
 }
 
 .dailyCardImage {

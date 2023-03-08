@@ -53,7 +53,7 @@ const DailyCard = () => {
                   className="dailyCardButton"
                   onClick={() => viewCard(card._id)}
                 >
-                  Learn More About {card.name}
+                  LEARN MORE ABOUT {card.name.toUpperCase()}?
                 </button>
               </div>
             </div>

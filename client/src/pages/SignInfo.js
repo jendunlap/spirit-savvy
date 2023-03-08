@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
 import Social from '../components/Social'
 
-const SignInfo = ({ signs, selectedSignIndex }) => {
+const SignInfo = () => {
   let { signId } = useParams()
 
   const [signInfo, setSignInfo] = useState(null)

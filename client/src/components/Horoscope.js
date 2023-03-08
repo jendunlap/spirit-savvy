@@ -1,8 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Horoscope = () => {
+  let navigate = useNavigate()
   const [sign, setSign] = useState('Aries')
   const [horoscope, setHoroscope] = useState({})
   const [modalOpen, setModalOpen] = useState(false)
@@ -67,6 +69,49 @@ const Horoscope = () => {
     }
   }
 
+  const signNavigate = (sign) => {
+    switch (sign) {
+      case 'Aries':
+        navigate(`/signs/64075ea856681f54f39816a6`)
+        break
+      case 'Taurus':
+        navigate(`/signs/64075fa956681f54f39816ab`)
+        break
+      case 'Gemini':
+        navigate(`/signs/6407600956681f54f39816ad`)
+        break
+      case 'Cancer':
+        navigate(`/signs/6407607e56681f54f39816af`)
+        break
+      case 'Leo':
+        navigate(`/signs/640760f256681f54f39816b1`)
+        break
+      case 'Virgo':
+        navigate(`/signs/6407614c56681f54f39816b3`)
+        break
+      case 'Libra':
+        navigate(`/signs/6407619f56681f54f39816b5`)
+        break
+      case 'Scorpio':
+        navigate(`/signs/640761f456681f54f39816b7`)
+        break
+      case 'Sagittarius':
+        navigate(`/signs/6407625d56681f54f39816b9`)
+        break
+      case 'Capricorn':
+        navigate(`/signs/640762b456681f54f39816bb`)
+        break
+      case 'Aquarius':
+        navigate(`/signs/6407631c56681f54f39816bd`)
+        break
+      case 'Pisces':
+        navigate(`/signs/6407636f56681f54f39816bf`)
+        break
+      default:
+        break
+    }
+  }
+
   useEffect(() => {
     const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=Today`
     axios
@@ -108,7 +153,15 @@ const Horoscope = () => {
             <div className="horoscopeSign">
               YOUR DAILY {sign.toUpperCase()} HOROSCOPE
             </div>
-            <div className="horoscopeDescription">{horoscope.description}</div>
+            <div className="horoscopeDescription">
+              <p>{horoscope.description}</p>
+              <button
+                className="dailyHoroscopeButton"
+                onClick={() => signNavigate(sign)}
+              >
+                LEARN MORE ABOUT {sign.toUpperCase()}?
+              </button>
+            </div>
           </div>
         </div>
       )}
