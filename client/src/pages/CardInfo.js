@@ -54,22 +54,22 @@ const CardInfo = () => {
               {currentCardNumber > 1 ? (
                 <Link
                   to={`/cards/${cardsList[currentCardNumber - 1]._id}`}
-                  className="backButton"
+                  className="previousButton"
                 >
-                  PREVIOUS
+                  {cardsList[currentCardNumber - 1]?.name}
                 </Link>
               ) : null}
             </button>
             <button className="backButton" onClick={() => navigate(-1)}>
-              ALL
+              ALL CARDS
             </button>
             <button className="backButton">
               {currentCardNumber < cardsList.length ? (
                 <Link
                   to={`/cards/${cardsList[currentCardNumber + 1]._id}`}
-                  className="backButton"
+                  className="nextButton"
                 >
-                  NEXT
+                  {cardsList[currentCardNumber + 1]?.name}
                 </Link>
               ) : null}
             </button>

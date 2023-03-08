@@ -121,7 +121,7 @@ body {
 .homeServicesDiv:hover .servicesLink {
   letter-spacing: 8px;
   transition: .2s;
-  color:#324e5a;
+  color:#a7a783;
 }
 
 .homeCardDiv {
@@ -183,7 +183,7 @@ body {
 .homeBookingDiv:hover .bookingLink {
   letter-spacing: 8px;
   transition: .2s;
-  color: #324e5a;
+  color: #a7a783;
 }
 
 .homeReviewDiv {
@@ -892,23 +892,37 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#384d59;
+  background-color:#a7a783;
   text-decoration: none;
 }
 
 .backButton {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   font-family: 'amarante';
   font-size: 30px;
-  padding: 5px 20px;
   color:#f0e6be;
-  background-color:#384d59;
-  /* border-radius: 5px; */
-  /* margin: 0 0 20px 0; */
+  background-color:#a7a783;
   text-decoration: none;
+  padding: 10px;
+}
+
+.previousButton, .nextButton {
+  margin: 0 10px;
+  width: 100%;
+  color:#f0e6be;
+  text-decoration: none;
+}
+
+.previousButton {
+  text-align: left;
+}
+
+.nextButton {
+  text-align: right;
 }
 
 .retrogradeAnswer {
