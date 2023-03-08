@@ -59,11 +59,20 @@ const CardInfo = () => {
               >
                 {cardsList[currentCardNumber - 1]?.name}
               </button>
-            ) : null}
+            ) : (
+              <button
+                className="previousButton backButton"
+                onClick={() =>
+                  navigate(`/cards/${cardsList[cardsList.length - 1]._id}`)
+                }
+              >
+                {cardsList[cardsList.length - 1]?.name}
+              </button>
+            )}
             <button className="backButton" onClick={() => navigate(`/tarot`)}>
               ALL CARDS
             </button>
-            {currentCardNumber < cardsList.length ? (
+            {currentCardNumber < cardsList.length - 1 ? (
               <button
                 className="nextButton backButton"
                 onClick={() =>
@@ -72,7 +81,14 @@ const CardInfo = () => {
               >
                 {cardsList[currentCardNumber + 1]?.name}
               </button>
-            ) : null}
+            ) : (
+              <button
+                className="nextButton backButton"
+                onClick={() => navigate(`/cards/${cardsList[0]._id}`)}
+              >
+                {cardsList[0]?.name}
+              </button>
+            )}
           </div>
         </div>
       ) : null}

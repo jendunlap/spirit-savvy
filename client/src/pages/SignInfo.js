@@ -59,14 +59,23 @@ const SignInfo = ({ signs, selectedSignIndex }) => {
               >
                 {signsList[currentSignNumber - 1]?.name}
               </button>
-            ) : null}
+            ) : (
+              <button
+                className="previousButton backButton"
+                onClick={() =>
+                  navigate(`/signs/${signsList[signsList.length - 1]._id}`)
+                }
+              >
+                {signsList[signsList.length - 1]?.name}
+              </button>
+            )}
             <button
               className="backButton"
               onClick={() => navigate(`/horoscope`)}
             >
               ALL CARDS
             </button>
-            {currentSignNumber < signsList.length ? (
+            {currentSignNumber < signsList.length - 1 ? (
               <button
                 className="nextButton backButton"
                 onClick={() =>
@@ -75,7 +84,14 @@ const SignInfo = ({ signs, selectedSignIndex }) => {
               >
                 {signsList[currentSignNumber + 1]?.name}
               </button>
-            ) : null}
+            ) : (
+              <button
+                className="nextButton backButton"
+                onClick={() => navigate(`/signs/${signsList[0]._id}`)}
+              >
+                {signsList[0]?.name}
+              </button>
+            )}
           </div>
         </div>
       ) : null}
