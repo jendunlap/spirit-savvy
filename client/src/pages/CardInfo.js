@@ -50,29 +50,29 @@ const CardInfo = () => {
             <h5 className="pageInfoP">{cardInfo.longDescription4}</h5>
           </div>
           <div className="backButtonContainer">
-            <button className="backButton">
-              {currentCardNumber > 1 ? (
-                <Link
-                  to={`/cards/${cardsList[currentCardNumber - 1]._id}`}
-                  className="previousButton"
-                >
-                  {cardsList[currentCardNumber - 1]?.name}
-                </Link>
-              ) : null}
-            </button>
-            <button className="backButton" onClick={() => navigate(-1)}>
+            {currentCardNumber >= 1 ? (
+              <button
+                className="previousButton backButton"
+                onClick={() =>
+                  navigate(`/cards/${cardsList[currentCardNumber - 1]._id}`)
+                }
+              >
+                {cardsList[currentCardNumber - 1]?.name}
+              </button>
+            ) : null}
+            <button className="backButton" onClick={() => navigate(`/tarot`)}>
               ALL CARDS
             </button>
-            <button className="backButton">
-              {currentCardNumber < cardsList.length ? (
-                <Link
-                  to={`/cards/${cardsList[currentCardNumber + 1]._id}`}
-                  className="nextButton"
-                >
-                  {cardsList[currentCardNumber + 1]?.name}
-                </Link>
-              ) : null}
-            </button>
+            {currentCardNumber < cardsList.length ? (
+              <button
+                className="nextButton backButton"
+                onClick={() =>
+                  navigate(`/cards/${cardsList[currentCardNumber + 1]._id}`)
+                }
+              >
+                {cardsList[currentCardNumber + 1]?.name}
+              </button>
+            ) : null}
           </div>
         </div>
       ) : null}

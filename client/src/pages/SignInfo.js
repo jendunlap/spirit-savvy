@@ -9,11 +9,22 @@ const SignInfo = ({ signs, selectedSignIndex }) => {
   let { signId } = useParams()
 
   const [signInfo, setSignInfo] = useState(null)
+  const [signsList, setSignsList] = useState([])
+  const [currentSignNumber, setCurrentSignNumber] = useState(null)
 
   const getSignInfo = async () => {
     const response = await axios.get(`/signs/${signId}`)
     setSignInfo(response.data.sign)
     console.log(response.data.sign)
+    const signsResponse = await axios.get(`/signs`)
+    const filteredSigns = signsResponse.data.signs.sort(
+      (a, b) => a.number - b.number
+    )
+    setSignsList(filteredSigns)
+    const currentSignIndex = filteredSigns.findIndex(
+      (sign) => sign.number === response.data.sign.number
+    )
+    setCurrentSignNumber(currentSignIndex)
   }
 
   let navigate = useNavigate()
@@ -39,9 +50,32 @@ const SignInfo = ({ signs, selectedSignIndex }) => {
             <h5 className="pageInfoP">{signInfo.description3}</h5>
           </div>
           <div className="backButtonContainer">
-            <button className="backButton" onClick={() => navigate(-1)}>
-              BACK
+            {currentSignNumber >= 1 ? (
+              <button
+                className="previousButton backButton"
+                onClick={() =>
+                  navigate(`/signs/${signsList[currentSignNumber - 1]._id}`)
+                }
+              >
+                {signsList[currentSignNumber - 1]?.name}
+              </button>
+            ) : null}
+            <button
+              className="backButton"
+              onClick={() => navigate(`/horoscope`)}
+            >
+              ALL CARDS
             </button>
+            {currentSignNumber < signsList.length ? (
+              <button
+                className="nextButton backButton"
+                onClick={() =>
+                  navigate(`/signs/${signsList[currentSignNumber + 1]._id}`)
+                }
+              >
+                {signsList[currentSignNumber + 1]?.name}
+              </button>
+            ) : null}
           </div>
         </div>
       ) : null}

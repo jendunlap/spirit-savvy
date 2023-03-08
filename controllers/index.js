@@ -41,6 +41,19 @@ const getCardById = async (req, res) => {
   }
 }
 
+const getCardByName = async (req, res) => {
+  try {
+    const { name } = req.params
+    const card = await Card.findOne({ name })
+    if (card) {
+      return res.status(200).json({ card })
+    }
+    return res.status(404).send('The Card does not exist')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const updateCard = async (req, res) => {
   console.log(req.body)
   try {
@@ -388,6 +401,7 @@ module.exports = {
   createCard,
   getAllCards,
   getCardById,
+  getCardByName,
   updateCard,
   deleteCard,
   createSign,

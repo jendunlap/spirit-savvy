@@ -11,6 +11,8 @@ router.post('/cards', controllers.createCard)
 
 router.get('/cards/:id', controllers.getCardById)
 
+router.get('/cards/:name', controllers.getCardByName)
+
 router.put('/cards/:id', controllers.updateCard)
 
 router.delete('/cards/:id', controllers.deleteCard)

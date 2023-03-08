@@ -581,7 +581,6 @@ body {
   grid-row: first / span 4;
   background-color: #f0e6be;
   overflow-y: auto;
-  /* padding: 0 20px; */
 }
 
 .cardPageAbout {
@@ -591,6 +590,44 @@ body {
   color:#cd6d59;
   text-align: center;
   line-height: 80px;
+}
+
+.backButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#a7a783;
+  text-decoration: none;
+}
+
+.backButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: 'amarante';
+  font-size: 30px;
+  color:#f0e6be;
+  background-color:#a7a783;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.previousButton, .nextButton {
+  margin: 0 10px;
+  width: 100%;
+  color:#f0e6be;
+  text-decoration: none;
+}
+
+.previousButton {
+  text-align: left;
+}
+
+.nextButton {
+  text-align: right;
 }
 
 .signPageDates {
@@ -881,48 +918,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.button {
-  padding: 0;
-}
-
-.backButtonContainer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color:#a7a783;
-  text-decoration: none;
-}
-
-.backButton {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  font-family: 'amarante';
-  font-size: 30px;
-  color:#f0e6be;
-  background-color:#a7a783;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.previousButton, .nextButton {
-  margin: 0 10px;
-  width: 100%;
-  color:#f0e6be;
-  text-decoration: none;
-}
-
-.previousButton {
-  text-align: left;
-}
-
-.nextButton {
-  text-align: right;
 }
 
 .retrogradeAnswer {
