@@ -1,37 +1,33 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import Nav from '../components/Nav'
 import Retrograde from '../components/Retrograde'
 import Social from '../components/Social'
 
-const CardInfo = ({ cards, selectedCardIndex }) => {
+const CardInfo = () => {
   let { cardId } = useParams()
 
   const [cardInfo, setCardInfo] = useState(null)
+  const [cardsList, setCardsList] = useState([])
+  const [currentCardNumber, setCurrentCardNumber] = useState(null)
 
   const getCardInfo = async () => {
     const response = await axios.get(`/cards/${cardId}`)
     setCardInfo(response.data.card)
+    console.log(response.data.card)
+    const cardsResponse = await axios.get(`/cards`)
+    const filteredCards = cardsResponse.data.cards
+      .filter((card) => card.reversed === false)
+      .sort((a, b) => a.number - b.number)
+    setCardsList(filteredCards)
+    const currentCardIndex = filteredCards.findIndex(
+      (card) => card.number === response.data.card.number
+    )
+    setCurrentCardNumber(currentCardIndex)
   }
 
   let navigate = useNavigate()
-
-  const previous = () => {
-    const previousCardIndex = selectedCardIndex - 1
-    if (previousCardIndex >= 0) {
-      const previousCard = cards[previousCardIndex]
-      navigate(`/cards/${previousCard.id}`)
-    }
-  }
-
-  const next = () => {
-    const nextCardIndex = selectedCardIndex + 1
-    if (nextCardIndex >= 0) {
-      const nextCard = cards[nextCardIndex]
-      navigate(`/cards/${nextCard.id}`)
-    }
-  }
 
   useEffect(() => {
     getCardInfo()
@@ -46,12 +42,6 @@ const CardInfo = ({ cards, selectedCardIndex }) => {
         <div className="cardPageInfo">
           <div>
             <h1 className="cardPageAbout">{cardInfo.name}</h1>
-            {/* <button className="previousButton" onClick={previous}>
-              Previous
-            </button>
-            <button className="nextButton" onClick={next}>
-              Next
-            </button> */}
           </div>
           <div className="cardLongDescription">
             <h5 className="pageInfoP">{cardInfo.longDescription}</h5>
@@ -60,8 +50,28 @@ const CardInfo = ({ cards, selectedCardIndex }) => {
             <h5 className="pageInfoP">{cardInfo.longDescription4}</h5>
           </div>
           <div className="backButtonContainer">
+            <button className="backButton">
+              {currentCardNumber > 1 ? (
+                <Link
+                  to={`/cards/${cardsList[currentCardNumber - 1]._id}`}
+                  className="backButton"
+                >
+                  PREVIOUS
+                </Link>
+              ) : null}
+            </button>
             <button className="backButton" onClick={() => navigate(-1)}>
-              BACK
+              ALL
+            </button>
+            <button className="backButton">
+              {currentCardNumber < cardsList.length ? (
+                <Link
+                  to={`/cards/${cardsList[currentCardNumber + 1]._id}`}
+                  className="backButton"
+                >
+                  NEXT
+                </Link>
+              ) : null}
             </button>
           </div>
         </div>
