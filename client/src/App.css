@@ -4,6 +4,10 @@ body {
   background-color:#324e5a
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .homeGrid {
   display: grid;
   grid-template-columns: [first] 25vw [second] 25vw [third] 25vw [fourth] 25vw[last-column];
@@ -25,6 +29,18 @@ body {
   font-size: 2.6vw;
 }
 
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  z-index: 5;
+  width: 50%;
+  height: 71vh;
+  bottom: 6vh;
+}
+
 .headerDrop {
   margin: -20px 0 0 0;
   height: 30%;
@@ -34,7 +50,7 @@ body {
 
 .homeLink {
   font-family: 'Amarante', cursive;
-  /* font-size: 90px; */
+  font-size: 2em;
   margin: 300px 0 0 0;
 }
 
@@ -42,19 +58,26 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 16px;
 }
 
 .headerLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color:#f0e6be;
   margin: 23px;
-  font-family: 'Barlow';
+  font-family: 'Amarante';
+  font-size: .7em;
   transition: .2s;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  margin: 0
 }
 
 .headerLink:hover {
-  /* letter-spacing: 5px; */
+  letter-spacing: 10px;
   color:#f0e6be8a;
   transition: .2s
 }
@@ -239,6 +262,20 @@ body {
     background-image: none;
   }
 
+  .dropdown {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    height: 81vh;
+    width: 100%;
+    z-index: 5;
+    bottom: -1vh;
+  }
+
   .homeLink {
     font-family: 'Amarante', cursive;
     font-size: 90px;
@@ -346,6 +383,7 @@ body {
   background-color: white;
   overflow-y: auto;
   padding: 20px;
+  position: relative;
 }
 
 .pageRetrogradeDiv {

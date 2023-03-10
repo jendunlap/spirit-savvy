@@ -27,6 +27,7 @@ const Nav = () => {
             <Link
               to="/"
               className="headerLink"
+              style={{ backgroundColor: '#6a7985' }}
               onClick={() => setShowDropdown(false)}
             >
               HOME
@@ -34,6 +35,7 @@ const Nav = () => {
             <Link
               to="/tarot"
               className="headerLink"
+              style={{ backgroundColor: '#90a1a5' }}
               onClick={() => setShowDropdown(false)}
             >
               TAROT
@@ -41,6 +43,7 @@ const Nav = () => {
             <Link
               to="/horoscope"
               className="headerLink"
+              style={{ backgroundColor: '#9d9d66' }}
               onClick={() => setShowDropdown(false)}
             >
               HOROSCOPE
@@ -48,6 +51,7 @@ const Nav = () => {
             <Link
               to="/services"
               className="headerLink"
+              style={{ backgroundColor: '#bfa355' }}
               onClick={() => setShowDropdown(false)}
             >
               SERVICES
@@ -55,6 +59,7 @@ const Nav = () => {
             <Link
               to="/booking"
               className="headerLink"
+              style={{ backgroundColor: '#e5be6a' }}
               onClick={() => setShowDropdown(false)}
             >
               BOOKING
@@ -62,6 +67,7 @@ const Nav = () => {
             <Link
               to="/reviews"
               className="headerLink"
+              style={{ backgroundColor: '#e2a65c' }}
               onClick={() => setShowDropdown(false)}
             >
               REVIEWS
@@ -69,6 +75,7 @@ const Nav = () => {
             <Link
               to="/about"
               className="headerLink"
+              style={{ backgroundColor: '#de8968' }}
               onClick={() => setShowDropdown(false)}
             >
               ABOUT
