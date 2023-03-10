@@ -27,18 +27,6 @@ const CardInfo = () => {
     setCurrentCardNumber(currentCardIndex)
   }
 
-  const getOppositeCard = () => {
-    if (cardInfo.reversed) {
-      return cardsList.find(
-        (card) => card.number === cardInfo.number && !card.reversed
-      )
-    } else {
-      return cardsList.find(
-        (card) => card.number === cardInfo.number && card.reversed
-      )
-    }
-  }
-
   let navigate = useNavigate()
 
   useEffect(() => {
@@ -55,9 +43,6 @@ const CardInfo = () => {
           <div>
             <h1 className="cardPageAbout">{cardInfo.name}</h1>
           </div>
-          <a href={`/cards/${getOppositeCard()._id}`}>
-            View {getOppositeCard().reversed ? 'Upright' : 'Reversed'} Version
-          </a>
           <div className="cardLongDescription">
             <h5 className="pageInfoP">{cardInfo.longDescription}</h5>
             <h5 className="pageInfoP">{cardInfo.longDescription2}</h5>
