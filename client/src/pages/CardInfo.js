@@ -55,12 +55,9 @@ const CardInfo = () => {
           <div>
             <h1 className="cardPageAbout">{cardInfo.name}</h1>
           </div>
-          {getOppositeCard() && (
-            <a href={`/cards/${getOppositeCard()._id}`}>
-              View {getOppositeCard().reversed ? 'Upright' : 'Reversed'} Version
-            </a>
-          )}
-
+          <a href={`/cards/${getOppositeCard()._id}`}>
+            View {getOppositeCard().reversed ? 'Upright' : 'Reversed'} Version
+          </a>
           <div className="cardLongDescription">
             <h5 className="pageInfoP">{cardInfo.longDescription}</h5>
             <h5 className="pageInfoP">{cardInfo.longDescription2}</h5>
