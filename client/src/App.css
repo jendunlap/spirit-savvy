@@ -37,7 +37,7 @@ body::-webkit-scrollbar {
   position: absolute;
   z-index: 5;
   width: 50%;
-  height: 71vh;
+  height: 70.5vh;
   bottom: 6vh;
 }
 
