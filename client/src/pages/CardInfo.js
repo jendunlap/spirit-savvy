@@ -53,6 +53,16 @@ const CardInfo = () => {
         <div className="cardPageInfo">
           <div>
             <h1 className="cardPageAbout">{cardInfo.name}</h1>
+            {reversedCard && (
+              <button
+                className="backButton"
+                onClick={() => navigate(`/cards/${reversedCard._id}`)}
+              >
+                {reversedCard.reversed
+                  ? `Looking for ${reversedCard.name} reversed?`
+                  : `Looking for ${reversedCard.name} upright?`}
+              </button>
+            )}
           </div>
           <div className="cardLongDescription">
             <h5 className="pageInfoP">{cardInfo.longDescription}</h5>
