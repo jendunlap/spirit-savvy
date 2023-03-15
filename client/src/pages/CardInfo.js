@@ -15,9 +15,11 @@ const CardInfo = () => {
   const getCardInfo = async () => {
     const response = await axios.get(`/cards/${cardId}`)
     setCardInfo(response.data.card)
-    console.log(response.data.card)
-    const cardsResponse = await axios.get(`/cards`)
-    const filteredCards = cardsResponse.data.cards
+  }
+
+  const getCardsInfo = async () => {
+    const response = await axios.get(`/cards`)
+    const filteredCards = response.data.cards
       .filter((card) => card.reversed === false)
       .sort((a, b) => a.number - b.number)
     setCardsList(filteredCards)
@@ -31,6 +33,7 @@ const CardInfo = () => {
 
   useEffect(() => {
     getCardInfo()
+    getCardsInfo()
   }, [cardId])
 
   return (
