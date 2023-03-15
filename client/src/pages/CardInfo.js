@@ -11,29 +11,37 @@ const CardInfo = () => {
   const [cardInfo, setCardInfo] = useState(null)
   const [cardsList, setCardsList] = useState([])
   const [currentCardNumber, setCurrentCardNumber] = useState(null)
+  const [reversedCard, setReversedCard] = useState(null)
 
   const getCardInfo = async () => {
     const response = await axios.get(`/cards/${cardId}`)
-    setCardInfo(response.data.card)
-  }
+    const cardData = response.data.card
+    setCardInfo(cardData)
 
-  const getCardsInfo = async () => {
-    const response = await axios.get(`/cards`)
-    const filteredCards = response.data.cards
+    const cardsResponse = await axios.get(`/cards`)
+    const filteredCards = cardsResponse.data.cards
       .filter((card) => card.reversed === false)
       .sort((a, b) => a.number - b.number)
     setCardsList(filteredCards)
+
     const currentCardIndex = filteredCards.findIndex(
-      (card) => card.number === response.data.card.number
+      (card) => card.number === cardData.number
     )
     setCurrentCardNumber(currentCardIndex)
+
+    const oppositeCardsResponse = await axios.get(`/cards`)
+    const oppositeCard = oppositeCardsResponse.data.cards.find((card) => {
+      return card.name === cardData.name && card.reversed !== cardData.reversed
+    })
+    setReversedCard(oppositeCard)
+    console.log(oppositeCardsResponse)
+    console.log(oppositeCard)
   }
 
   let navigate = useNavigate()
 
   useEffect(() => {
     getCardInfo()
-    getCardsInfo()
   }, [cardId])
 
   return (
