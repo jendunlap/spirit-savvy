@@ -651,11 +651,6 @@ body::-webkit-scrollbar {
   overflow-y: scroll;
 }
 
-.aboutContainer {
-  grid-column: 1 / span 1;
-  grid-row: first / span 1;
-}
-
 .cardPageAbout {
   font-family: 'Amarante', cursive;
   font-size: 5.2em;
@@ -684,7 +679,6 @@ body::-webkit-scrollbar {
   color:#f0e6be;
   background-color:#a7a783;
   text-decoration: none;
-  /* padding: 10px; */
   grid-column: 1 / span 1;
   grid-row: second/ span 1;
 }
@@ -696,8 +690,8 @@ body::-webkit-scrollbar {
 }
 
 .backButtonContainer {
-  /* height: 100%;
-  width: 100%; */
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -746,9 +740,69 @@ body::-webkit-scrollbar {
 /* CARD INFO PAGE MEDIA QUERY */
 
 @media only screen and (max-width: 1220px) {
+
   .cardPageInfo {
     grid-column: 3 / span 2;
     grid-row: second / span 3;
+    display: grid;
+    grid-template-columns: [first] 50vw [last-column];
+    grid-template-rows: [first] 19vh [second] 43vh [third] 6vh [last-row];
+    overflow-y: auto;
+  }
+  
+  .cardPageHeader {
+    display: grid;
+    grid-template-columns: [first] 50vw [last-column];
+    grid-template-rows: [first] 13vh [second] 6vh [last-row];
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    color:#f0e6be;
+    overflow-y: scroll;
+  }
+  
+  .cardPageAbout {
+    font-family: 'Amarante', cursive;
+    font-size:3em;
+    margin: .7em 0 0 0;
+    text-align: center;
+  }
+  
+  .reversedOr {
+    font-family: 'Amarante', cursive;
+    font-size: 1.8em;
+    margin: -.5em;
+    padding: 0 0 1em 0;
+    text-align: center;
+    visibility: hidden;
+  }
+  
+  .reverseButton {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-family: 'amarante';
+    font-size: 1.2em;
+    color:#f0e6be;
+    background-color:#a7a783;
+    text-decoration: none;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  .cardLongDescription {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    overflow-y: auto
+  }
+
+  .backButton {
+    font-size: 1.2em;
   }
   
   .cardsPageImageTBD {
