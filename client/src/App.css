@@ -356,7 +356,7 @@ body::-webkit-scrollbar {
 
 .pageInfoP {
   font-family: 'Barlow';
-  font-size: 20px;
+  font-size: 1.2EM;
   text-align: justify;
   padding: 20px 100px 0 100px;
   color:#384d59;
@@ -550,7 +550,7 @@ body::-webkit-scrollbar {
 }
 
 .cardsPageImage {
-  width: 50%;
+  width: 85%;
   border-radius: 20px;
 }
 
@@ -566,7 +566,15 @@ body::-webkit-scrollbar {
   grid-row: first / span 4;
   background-color: #f0e6be;
   overflow-y: auto;
-  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.allCardsCard {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -580,6 +588,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
 /* ALL CARDS MEDIA QUERY */
@@ -597,6 +606,10 @@ body::-webkit-scrollbar {
 .cardsPageImage {
   width: 80%;
   border-radius: 20px;
+}
+
+.allCardsDiv {
+  width: 95%;
 }
 
 }
@@ -646,7 +659,7 @@ body::-webkit-scrollbar {
   align-items: center;
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  background-color:#667a86;
+  background-color:#90a1a5;
   color:#f0e6be;
   overflow-y: scroll;
 }
@@ -675,7 +688,7 @@ body::-webkit-scrollbar {
   align-items: center;
   border: none;
   font-family: 'amarante';
-  font-size: 2em;
+  font-size: 1.5em;
   color:#f0e6be;
   background-color:#a7a783;
   text-decoration: none;
@@ -709,7 +722,7 @@ body::-webkit-scrollbar {
   align-items: center;
   border: none;
   font-family: 'amarante';
-  font-size: 2em;
+  font-size: 1.5em;
   color:#f0e6be;
   background-color:#a7a783;
   text-decoration: none;

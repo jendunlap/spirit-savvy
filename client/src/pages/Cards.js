@@ -8,6 +8,7 @@ import Social from '../components/Social'
 
 const Cards = () => {
   const [cards, setCards] = useState([])
+  const [search, setSearch] = useState('')
 
   let navigate = useNavigate()
   let { cardsId } = useParams()
@@ -32,9 +33,21 @@ const Cards = () => {
         <Nav />
       </div>
       <div className="cardsPageInfo">
+        <div className="cardsPageSearch">
+          <input
+            type="text"
+            placeholder="Search by name"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
         <div className="allCardsCard">
           {cards
-            .filter((card) => card.reversed === false)
+            .filter(
+              (card) =>
+                card.reversed === false &&
+                card.name.toLowerCase().includes(search.toLowerCase())
+            )
             .sort((a, b) => a.number - b.number)
             .map((card) => (
               <div className="allCardsDiv">
