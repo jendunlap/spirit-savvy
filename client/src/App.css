@@ -567,6 +567,19 @@ body::-webkit-scrollbar {
   background-color: #f0e6be;
   overflow-y: auto;
   padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.allCardsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ALL CARDS MEDIA QUERY */
@@ -615,38 +628,94 @@ body::-webkit-scrollbar {
 }
 
 .cardPageInfo {
+  display: grid;
+  grid-template-columns: [first] 50vw [last-column];
+  grid-template-rows: [first] 23.5vh [second] 65vh [third] 5.5vh [last-row];
   grid-column: 3 / span 2;
   grid-row: first / span 4;
   background-color: #f0e6be;
   overflow-y: auto;
 }
 
-.cardPageAbout {
-  font-family: 'Amarante', cursive;
-  font-size: 80px;
-  margin: 18px 0;
-  color:#cd6d59;
-  text-align: center;
-  line-height: 80px;
-}
-
-.backButtonContainer {
-  width: 100%;
-  display: flex;
+.cardPageHeader {
+  display: grid;
+  grid-template-columns: [first] 50vw [last-column];
+  grid-template-rows: [first] 17.5vh [second] 6vh [last-row];
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color:#a7a783;
-  text-decoration: none;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  background-color:#667a86;
+  color:#f0e6be;
+  overflow-y: scroll;
 }
 
-.backButton {
+.aboutContainer {
+  grid-column: 1 / span 1;
+  grid-row: first / span 1;
+}
+
+.cardPageAbout {
+  font-family: 'Amarante', cursive;
+  font-size: 5.2em;
+  margin: 1.1em 0 0 0;
+  text-align: center;
+}
+
+.reversedOr {
+  font-family: 'Amarante', cursive;
+  font-size: 1.8em;
+  margin: -.5em;
+  padding: 0 0 1em 0;
+  text-align: center;
+  visibility: hidden;
+}
+
+.reverseButton {
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   font-family: 'amarante';
-  font-size: 30px;
+  font-size: 2em;
+  color:#f0e6be;
+  background-color:#a7a783;
+  text-decoration: none;
+  /* padding: 10px; */
+  grid-column: 1 / span 1;
+  grid-row: second/ span 1;
+}
+
+.cardLongDescription {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  overflow-y: auto
+}
+
+.backButtonContainer {
+  /* height: 100%;
+  width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#a7a783;
+  text-decoration: none;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1
+}
+
+.backButton {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: 'amarante';
+  font-size: 2em;
   color:#f0e6be;
   background-color:#a7a783;
   text-decoration: none;
@@ -960,15 +1029,6 @@ body::-webkit-scrollbar {
 
 .homeReviews {
   width: 80%
-}
-
-.allCardsDiv {
-  /* width: 20%; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 .pagePic {

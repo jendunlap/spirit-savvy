@@ -51,11 +51,18 @@ const CardInfo = () => {
       </div>
       {cardInfo ? (
         <div className="cardPageInfo">
-          <div>
-            <h1 className="cardPageAbout">{cardInfo.name}</h1>
+          <div className="cardPageHeader">
+            <div className="aboutContainer">
+              <h1 className="cardPageAbout">{cardInfo.name.toUpperCase()}</h1>
+              {cardInfo.reversed ? (
+                <p className="reversedOr">reversed</p>
+              ) : (
+                <p className="reversedOr">upright</p>
+              )}
+            </div>
             {reversedCard && (
               <button
-                className="backButton"
+                className="reverseButton"
                 onClick={() => navigate(`/cards/${reversedCard._id}`)}
               >
                 {reversedCard.reversed
