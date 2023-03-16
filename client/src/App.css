@@ -591,6 +591,29 @@ body::-webkit-scrollbar {
   width: 50%;
 }
 
+.cardsPageAbout {
+  font-family: 'Amarante', cursive;
+  font-size: 5.2em;
+  margin: .9em 0 0 0;
+  text-align: center;
+}
+
+.searchButton {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: 'amarante';
+  font-size: 1.5em;
+  color:#f0e6be;
+  background-color:#a7a783;
+  grid-column: 1 / span 1;
+  grid-row: second/ span 1;
+  text-align: center;
+}
+
 /* ALL CARDS MEDIA QUERY */
 
 @media only screen and (max-width: 1220px) {
@@ -610,6 +633,12 @@ body::-webkit-scrollbar {
 
 .allCardsDiv {
   width: 95%;
+}
+
+.cardsPageAbout {
+  font-family: 'Amarante', cursive;
+  font-size:3em;
+  text-align: center;
 }
 
 }
@@ -694,6 +723,11 @@ body::-webkit-scrollbar {
   text-decoration: none;
   grid-column: 1 / span 1;
   grid-row: second/ span 1;
+  text-align: center;
+}
+
+.search {
+  color:#f0e6be
 }
 
 .cardLongDescription {

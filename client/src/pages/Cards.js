@@ -32,11 +32,16 @@ const Cards = () => {
       <div className="pageHeader">
         <Nav />
       </div>
-      <div className="cardsPageInfo">
-        <div className="cardsPageSearch">
+      <div className="cardPageInfo">
+        <div className="cardPageHeader">
+          <div className="aboutContainer">
+            <h1 className="cardsPageAbout">THE TAROT</h1>
+            <p></p>
+          </div>
           <input
+            className="searchButton"
             type="text"
-            placeholder="Search by name"
+            placeholder="SEARCH CARDS"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
