@@ -75,7 +75,7 @@ const SignInfo = () => {
               className="backButton"
               onClick={() => navigate(`/horoscope`)}
             >
-              ALL CARDS
+              ALL SIGNS
             </button>
             {currentSignNumber < signsList.length - 1 ? (
               <button
