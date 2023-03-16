@@ -636,9 +636,10 @@ body::-webkit-scrollbar {
 }
 
 .cardsPageAbout {
-  font-family: 'Amarante', cursive;
-  font-size:3em;
-  text-align: center;
+    font-family: 'Amarante', cursive;
+    font-size:3em;
+    margin: .1em 0 0 0;
+    text-align: center;
 }
 
 }
@@ -778,6 +779,13 @@ body::-webkit-scrollbar {
   text-align: right;
 }
 
+.signsPageAbout {
+  font-family: 'Amarante', cursive;
+  font-size: 5.2em;
+  margin: .7em 0 0 0;
+  text-align: center;
+}
+
 .signPageDates {
   font-family: 'Amarante', cursive;
   color:#324e5a;
@@ -788,6 +796,13 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 1220px) {
 
+  
+  .signsPageAbout {
+    font-family: 'Amarante', cursive;
+    font-size:3em;
+    margin: .1em 0 0 0;
+    text-align: center;
+}
   .cardPageInfo {
     grid-column: 3 / span 2;
     grid-row: second / span 3;

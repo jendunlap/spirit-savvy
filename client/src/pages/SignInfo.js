@@ -40,9 +40,11 @@ const SignInfo = () => {
       </div>
       {signInfo ? (
         <div className="cardPageInfo">
-          <div>
-            <h1 className="cardPageAbout">{signInfo.name}</h1>
-            <h2 className="signPageDates">{signInfo.dates}</h2>
+          <div className="cardPageHeader">
+            <div className="aboutContainer">
+              <h1 className="signsPageAbout">{signInfo.name.toUpperCase()}</h1>
+            </div>
+            <h2 className="reverseButton">{signInfo.dates}</h2>
           </div>
           <div className="cardLongDescription">
             <h5 className="pageInfoP">{signInfo.description1}</h5>
