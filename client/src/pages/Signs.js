@@ -8,6 +8,7 @@ import Social from '../components/Social'
 
 const Signs = () => {
   const [signs, setSigns] = useState([])
+  const [search, setSearch] = useState('')
 
   let navigate = useNavigate()
   let { signsId } = useParams()
@@ -32,6 +33,19 @@ const Signs = () => {
         <Nav />
       </div>
       <div className="cardsPageInfo">
+        <div className="cardPageHeader">
+          <div className="aboutContainer">
+            <h1 className="cardsPageAbout">STAR SIGNS</h1>
+            <p></p>
+          </div>
+          <input
+            className="searchButton"
+            type="text"
+            placeholder="SEARCH SIGNS"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
         <div className="allCardsCard">
           {signs
             .sort((a, b) => a.number - b.number)
