@@ -361,7 +361,6 @@ body::-webkit-scrollbar {
   padding: 20px 100px 0 100px;
   color:#384d59;
   padding: 0 50px;
-
 }
 
 .pageInfoAbout {
@@ -885,7 +884,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   height: 100%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .horoscopeDiv {
@@ -1078,10 +1077,6 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 1220px) {
 
-/* .dailyCardImage {
-  width: 80%
-} */
-
 }
 
 /* HOME REVIEW CYCLE */
@@ -1161,18 +1156,28 @@ body::-webkit-scrollbar {
   position: relative;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 10s linear infinite;
+  animation: marquee 10s linear forwards infinite;
   display: inline-block;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 21px;
+  padding: 0 0 .5em 0;
 }
 
 .retrogradeTitle {
   font-family: "amarante";
-  font-size: 25px;
+  font-size: 2em;
   padding: 0 5px;
+}
+
+.retrogradeThing {
+  font-family: "barlow";
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  letter-spacing: .1em;
 }
 
 @keyframes marquee {

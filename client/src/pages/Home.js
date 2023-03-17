@@ -8,8 +8,19 @@ import Portrait from '../components/Portrait'
 import BookingLink from '../components/BookingLink'
 import Nav from '../components/Nav'
 import Social from '../components/Social'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Home = () => {
+  const goToBooking = () => {
+    navigate(`/booking/`)
+  }
+
+  const goToServices = () => {
+    navigate(`/services/`)
+  }
+
+  let navigate = useNavigate()
+
   return (
     <div className="homeGrid">
       <div className="header">
@@ -24,10 +35,10 @@ const Home = () => {
       <div className="homePortraitDiv">
         <Portrait />
       </div>
-      <div className="homeServicesDiv">
+      <div className="homeServicesDiv" onClick={goToServices}>
         <ServicesLink />
       </div>
-      <div className="homeBookingDiv">
+      <div className="homeBookingDiv" onClick={goToBooking}>
         <BookingLink />
       </div>
       <div className="homeReviewDiv">
