@@ -52,8 +52,11 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="pagePic">
-        <img src="https://i.imgur.com/TzWJA4e.jpeg" className="pagePic"></img>
+      <div className="cardsPagePic">
+        <img
+          src="https://i.imgur.com/G9JRw9t.jpg"
+          className="cardsPagePic2"
+        ></img>
       </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />

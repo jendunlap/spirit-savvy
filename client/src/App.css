@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
 .homePortraitDiv {
   grid-column: 3 / span 1;
   grid-row: first / span 2;
-  background-image: url('https://i.imgur.com/TzWJA4e.jpeg');
+  background-image: url('https://i.imgur.com/LEcMrTJ.jpg');
   width: 101%;
   height: 101%;
   background-size: cover;
@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
 }
 
 .homePortraitDiv:hover {
-  background-image: url('https://i.imgur.com/4HAWH3s.jpg');
+  background-image: url('https://i.imgur.com/REeamT0.jpg');
   transition: .2s;
   cursor: pointer
 }
