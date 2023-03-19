@@ -24,7 +24,7 @@ const About = () => {
             BOOK NOW
           </button>
         </div>
-        <div className="allCardsCard">
+        <div className="aboutInfo">
           <p className="pageInfoP">
             YeYe is a psychic medium intuitive coach based in Savannah, Georgia.
           </p>

@@ -18,6 +18,21 @@ const Services = () => {
     console.log(response.data.services)
   }
 
+  const colors = [
+    '#cd6d59',
+    '#de8968',
+    '#da8750',
+    '#e2a65c',
+    '#e5be6a',
+    '#bfa355',
+    '#9d9d66',
+    '#a7a783',
+    '#acbaa8',
+    '#90a1a5',
+    '#6a7985',
+    '#384d59'
+  ]
+
   const viewService = (id) => {
     navigate(`/services/${id}`)
   }
@@ -32,9 +47,20 @@ const Services = () => {
         <Nav />
       </div>
       {services ? (
-        <div className="pageInfo">
-          <div className="allServicesCard">
-            {services.map((service) => (
+        <div className="cardPageInfo">
+          <div className="cardPageHeader">
+            <div className="aboutContainer">
+              <h1 className="signsPageAbout">SERVICES</h1>
+            </div>
+            <button
+              className="reverseButton"
+              onClick={() => navigate(`/booking`)}
+            >
+              BOOK NOW
+            </button>
+          </div>
+          <div className="allServicesCard aboutInfo">
+            {services.map((service, index) => (
               <div>
                 <Service
                   id={service._id}
@@ -48,14 +74,14 @@ const Services = () => {
                   // description3={service.description3}
                   // onClick={viewService}
                 />
-                <h1 className="pageAbout">{service.name}</h1>
-                <h2 className="serviceTime">{service.time}</h2>
-                <h2 className="servicePrice">{service.price}</h2>
-                <p className="pageInfoP serviceTagline">
-                  {service.description1}
-                </p>
+                <h1 className="pageAbout" style={{ background: colors[index] }}>
+                  {service.name}
+                </h1>
+                <p className="serviceTagline">{service.description1}</p>
                 <p className="pageInfoP">{service.description2}</p>
                 <p className="pageInfoP">{service.description3}</p>
+                <h2 className="serviceTime">{service.time}</h2>
+                <h2 className="servicePrice">{service.price}</h2>
               </div>
             ))}
           </div>

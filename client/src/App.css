@@ -345,13 +345,23 @@ body::-webkit-scrollbar {
 }
 
 .pageAbout {
-  font-family: 'Moon Dance', cursive;
-  font-size: 80px;
-  margin: 18px 0;
-  color: #f77c96;
+  font-family: 'Amarante', cursive;
+  font-size: 3em;
+  margin: 0;
+  color:#f0e6be;
   text-align: center;
   line-height: 80px;
-  padding: 10px
+  padding: 20px 0;
+}
+
+.servicesPageAbout {
+  font-family: 'Amarante', cursive;
+  font-size: 3em;
+  margin: 0;
+  color:#f0e6be;
+  text-align: center;
+  line-height: 80px;
+  padding: 20px 0 0 0;
 }
 
 .pageInfoP {
@@ -381,7 +391,7 @@ body::-webkit-scrollbar {
   grid-row: first / span 4;
   background-color: white;
   overflow-y: auto;
-  padding: 20px;
+  /* padding: 20px; */
   position: relative;
 }
 
@@ -411,6 +421,16 @@ body::-webkit-scrollbar {
 }
 
 /* SERVICES */
+.serviceName {
+  margin: .1em;
+  font-size: 1.3em;
+}
+
+.serviceTime {
+  font-size: 1.1em;
+  font-family: 'barlow';
+  color:#324e5a;
+}
 
 .servicePrice, .serviceTime {
   margin: 0;
@@ -420,13 +440,17 @@ body::-webkit-scrollbar {
 }
 
 .servicePrice {
-  font-size: 22px;
-  color:#f77c96;
+  font-size: 1em;
+  color:#324e5a
 }
 
 .serviceTagline {
   font-weight: bold;
-  text-transform: uppercase
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'amarante';
+  font-size: 1.5em;
+  color:#324e5a;
 }
 
 /* MEDIA QUERY */
@@ -471,13 +495,13 @@ body::-webkit-scrollbar {
   }
 
   .pageAbout {
-    font-family: 'Moon Dance', cursive;
-    font-size: 60px;
+    font-family: 'Amarante', cursive;
+    font-size: 2em;
     margin: 0;
-    color: #f77c96;
-    text-align: right;
-    line-height: 40px;
-    padding: 20px;
+    color:#f0e6be;
+    text-align: center;
+    line-height: 1em;
+    /* padding: 20px; */
   }
   
   .pageInfo, .pageInfoP {
@@ -506,18 +530,18 @@ body::-webkit-scrollbar {
   .servicePrice, .serviceTime {
     margin: 0;
     width: 100%;
-    text-align: right;
+    text-align: center;
   }
 
   .servicePrice, .serviceTime {
     margin: 0;
     font-family: 'barlow';
     width: 100%;
-    text-align: right;
+    text-align: center;
   }
   
   .servicePrice {
-    font-size: 22px;
+    font-size: 1em;
   }
 
 }
@@ -588,6 +612,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   width: 50%;
+  position: relative
 }
 
 .cardsPageAbout {
@@ -736,6 +761,18 @@ body::-webkit-scrollbar {
   overflow-y: auto
 }
 
+.allCardsCard {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 2;
+  overflow-y: auto
+}
+
+.aboutInfo {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 2;
+  overflow-y: auto
+}
+
 .backButtonContainer {
   height: 100%;
   width: 100%;
@@ -862,6 +899,18 @@ body::-webkit-scrollbar {
     overflow-y: auto
   }
 
+  .allCardsCard {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+    overflow-y: auto
+  }
+
+  .aboutInfo {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+    overflow-y: auto
+  }
+
   .backButton {
     font-size: 1.2em;
   }
@@ -929,7 +978,6 @@ body::-webkit-scrollbar {
   height: 100%;
   background-color:#667a86;
   z-index: 3;
-  box-sizing: border-box;
 }
 
 .horoscopeSign {
@@ -1104,7 +1152,7 @@ body::-webkit-scrollbar {
 
 .reviewAuthor {
   font-family: 'Barlow', cursive;
-  font-size: 15px;
+  font-size: 2em;
   text-transform: uppercase;
   color:#324e5a;
   text-align: right;
@@ -1112,8 +1160,13 @@ body::-webkit-scrollbar {
 }
 
 .reviewAuthorMain {
-  font-size: 20px;
-  margin: 0
+  font-size: 1em;
+  margin: 0 4em 0 0;
+  font-family: 'Barlow', cursive;
+  text-transform: uppercase;
+  color:#324e5a;
+  text-align: right;
+  font-style: italic;
 }
 
 /* SOCIAL */

@@ -48,6 +48,9 @@ const Signs = () => {
         </div>
         <div className="allCardsCard">
           {signs
+            .filter((sign) =>
+              sign.name.toLowerCase().includes(search.toLowerCase())
+            )
             .sort((a, b) => a.number - b.number)
             .map((sign) => (
               <div className="allCardsDiv">
