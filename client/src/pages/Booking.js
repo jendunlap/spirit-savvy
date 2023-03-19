@@ -28,8 +28,11 @@ const Booking = () => {
           ></div>
         )}
       </div>
-      <div className="pagePic">
-        <img src="https://i.imgur.com/gSall5r.jpg" className="pagePic"></img>
+      <div className="cardsPagePic">
+        <img
+          src="https://i.imgur.com/slgxU0E.jpg"
+          className="cardsPagePic2"
+        ></img>
       </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />

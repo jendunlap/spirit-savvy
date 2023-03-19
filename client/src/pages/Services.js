@@ -66,13 +66,6 @@ const Services = () => {
                   id={service._id}
                   key={service._id}
                   image={service.image}
-                  // name={service.name}
-                  // price={service.price}
-                  // time={service.time}
-                  // description1={service.description1}
-                  // description2={service.description2}
-                  // description3={service.description3}
-                  // onClick={viewService}
                 />
                 <h1 className="pageAbout" style={{ background: colors[index] }}>
                   {service.name}
@@ -87,8 +80,11 @@ const Services = () => {
           </div>
         </div>
       ) : null}
-      <div className="pagePic">
-        <img src="https://i.imgur.com/HwAv2k4.jpg" className="pagePic"></img>
+      <div className="cardsPagePic">
+        <img
+          src="https://i.imgur.com/XTW3A3a.jpg"
+          className="cardsPagePic2"
+        ></img>
       </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />

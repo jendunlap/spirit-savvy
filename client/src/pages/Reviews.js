@@ -54,7 +54,7 @@ const Reviews = () => {
         </div>
         <div className="aboutInfo">
           {reviews.map((review, index) => (
-            <div>
+            <div className="reviewDiv">
               <Review id={review._id} key={review._id} />
               <h1 className="pageAbout" style={{ background: colors[index] }}>
                 {review.title}
@@ -65,8 +65,11 @@ const Reviews = () => {
           ))}
         </div>
       </div>
-      <div className="pagePic">
-        <img src="https://i.imgur.com/4l9uTeP.jpg" className="pagePic"></img>
+      <div className="cardsPagePic">
+        <img
+          src="https://i.imgur.com/aQLBzW8.jpg"
+          className="cardsPagePic2"
+        ></img>
       </div>
       <div className="pageRetrogradeDiv">
         <Retrograde />

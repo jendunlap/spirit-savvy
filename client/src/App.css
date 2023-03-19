@@ -351,7 +351,8 @@ body::-webkit-scrollbar {
   color:#f0e6be;
   text-align: center;
   line-height: 80px;
-  padding: 20px 0;
+  padding: 0;
+  margin: -22px 0 0 0;
 }
 
 .servicesPageAbout {
@@ -441,7 +442,8 @@ body::-webkit-scrollbar {
 
 .servicePrice {
   font-size: 1em;
-  color:#324e5a
+  color:#324e5a;
+  padding: .5em 0;
 }
 
 .serviceTagline {
@@ -501,7 +503,8 @@ body::-webkit-scrollbar {
     color:#f0e6be;
     text-align: center;
     line-height: 1em;
-    /* padding: 20px; */
+    padding: 20px;
+    margin: -22px 0 0;
   }
   
   .pageInfo, .pageInfoP {
@@ -542,6 +545,7 @@ body::-webkit-scrollbar {
   
   .servicePrice {
     font-size: 1em;
+    padding: .5em 0;
   }
 
 }
@@ -770,7 +774,7 @@ body::-webkit-scrollbar {
 .aboutInfo {
   grid-column: 1 / span 1;
   grid-row: 2 / span 2;
-  overflow-y: auto
+  overflow-y: auto;
 }
 
 .backButtonContainer {
@@ -908,7 +912,9 @@ body::-webkit-scrollbar {
   .aboutInfo {
     grid-column: 1 / span 1;
     grid-row: 2 / span 2;
-    overflow-y: auto
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .backButton {
@@ -1167,6 +1173,7 @@ body::-webkit-scrollbar {
   color:#324e5a;
   text-align: right;
   font-style: italic;
+  padding: 0 0 .5em 0;
 }
 
 /* SOCIAL */
@@ -1241,5 +1248,7 @@ body::-webkit-scrollbar {
     transform: translateX(-100%);
   }
 }
+
+/* BOOKING */
 
 /* ///////////// */
