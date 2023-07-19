@@ -22,7 +22,8 @@ const Sign = new Schema(
     heading3: { type: String, required: false },
     heading4: { type: String, required: false },
     heading5: { type: String, required: false },
-    horoscope: { type: String, required: false }
+    horoscope: { type: String, required: false },
+    horoscopeShort: { type: String, required: false }
   },
   { timestamps: true }
 )
