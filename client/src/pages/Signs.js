@@ -53,7 +53,7 @@ const Signs = () => {
             )
             .sort((a, b) => a.number - b.number)
             .map((sign) => (
-              <div className="allCardsDiv">
+              <div className="allCardsDiv" key={sign._id}>
                 <Sign id={sign._id} key={sign._id} onClick={viewSign} />
                 <img
                   src={sign.image}

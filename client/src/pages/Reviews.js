@@ -54,7 +54,7 @@ const Reviews = () => {
         </div>
         <div className="aboutInfo">
           {reviews.map((review, index) => (
-            <div className="reviewDiv">
+            <div className="reviewDiv" key={review._id}>
               <Review id={review._id} key={review._id} />
               <h1 className="pageAbout" style={{ background: colors[index] }}>
                 {review.title}

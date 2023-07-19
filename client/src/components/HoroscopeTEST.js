@@ -5,12 +5,23 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 const Horoscope = () => {
   let navigate = useNavigate()
-  let { signsId } = useParams()
-  let { signId } = useParams()
-  const [signs, setSigns] = useState([])
-  const [signInfo, setSignInfo] = useState(null)
+  const [sign, setSign] = useState('Aries')
   const [horoscope, setHoroscope] = useState({})
   const [modalOpen, setModalOpen] = useState(false)
+  const signs = [
+    'Aries',
+    'Taurus',
+    'Gemini',
+    'Cancer',
+    'Leo',
+    'Virgo',
+    'Libra',
+    'Scorpio',
+    'Sagittarius',
+    'Capricorn',
+    'Aquarius',
+    'Pisces'
+  ]
 
   const colors = [
     '#cd6d59',
@@ -100,65 +111,55 @@ const Horoscope = () => {
         break
     }
   }
-
-  const getSigns = async () => {
-    const response = await axios.get(`/signs`)
-    setSigns(response.data.signs)
-    console.log(response.data.signs)
-  }
-
-  const getSignInfo = async () => {
-    const response = await axios.get(`/signs/${signId}`)
-    setSignInfo(response.data.sign)
-    console.log(response.data.sign)
-  }
-
   useEffect(() => {
-    getSigns()
-  }, [signsId])
-
-  useEffect(() => {
-    getSignInfo()
-  }, [signId])
-
+    const URL = `https://ohmanda.com/api/horoscope/${sign}`
+    axios
+      .get(URL)
+      .then((response) => {
+        setHoroscope(response.data)
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error.response.data)
+      })
+  }, [sign])
   return (
     <div className="horoscopeDiv">
       <form className="signButtons">
         {signs.map((sign, index) => (
-          <div
+          <input
             className="signButton"
             type="button"
             name="sign"
-            key={sign._id}
             value={sign}
-            style={{ backgroundColor: colors[index] }}
-            onClick={() => {
-              setSignInfo(sign.name)
+            style={{ background: colors[index] }}
+            onClick={(e) => {
+              setSign(e.target.value)
               setModalOpen(true)
             }}
-          >
-            {sign.name}
-          </div>
+          />
         ))}
       </form>
       {modalOpen && (
         <div
           className="horoscopeModal"
-          style={{ background: backgroundColor(signInfo) }}
+          style={{ background: backgroundColor(sign) }}
         >
           <div
             className="horoscopeDescriptionDiv"
             onClick={() => setModalOpen(false)}
           >
-            <div className="horoscopeSign">YOUR DAILY {signInfo} HOROSCOPE</div>
+            <div className="horoscopeSign">
+              YOUR DAILY {sign.toUpperCase()} HOROSCOPE
+            </div>
             <div className="horoscopeDescription">
               {/* <p>{horoscope.description}</p> */}
               <p>{horoscope.horoscope}</p>
               <button
                 className="dailyHoroscopeButton"
-                onClick={() => signNavigate(signInfo)}
+                onClick={() => signNavigate(sign)}
               >
-                LEARN MORE ABOUT {signInfo}?
+                LEARN MORE ABOUT {sign.toUpperCase()}?
               </button>
             </div>
           </div>
