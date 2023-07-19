@@ -134,6 +134,7 @@ const Horoscope = () => {
             style={{ backgroundColor: colors[index] }}
             onClick={() => {
               setSignInfo(sign.name)
+              setHoroscope(sign.horoscopeShort)
               setModalOpen(true)
             }}
           >
@@ -150,15 +151,17 @@ const Horoscope = () => {
             className="horoscopeDescriptionDiv"
             onClick={() => setModalOpen(false)}
           >
-            <div className="horoscopeSign">YOUR DAILY {signInfo} HOROSCOPE</div>
+            <div className="horoscopeSign">
+              YOUR DAILY {signInfo.toUpperCase()} HOROSCOPE
+            </div>
             <div className="horoscopeDescription">
               {/* <p>{horoscope.description}</p> */}
-              <p>{horoscope.horoscope}</p>
+              <p>{horoscope}</p>
               <button
                 className="dailyHoroscopeButton"
                 onClick={() => signNavigate(signInfo)}
               >
-                LEARN MORE ABOUT {signInfo}?
+                LEARN MORE ABOUT {signInfo.toUpperCase()}?
               </button>
             </div>
           </div>
