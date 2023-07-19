@@ -5,22 +5,22 @@ import { useNavigate } from 'react-router-dom'
 
 const Horoscope = () => {
   let navigate = useNavigate()
-  const [sign, setSign] = useState('aries')
+  const [sign, setSign] = useState('Aries')
   const [horoscope, setHoroscope] = useState({})
   const [modalOpen, setModalOpen] = useState(false)
   const signs = [
-    'aries',
-    'taurus',
-    'gemini',
-    'cancer',
-    'leo',
-    'virgo',
-    'libra',
-    'scorpio',
-    'sagittarius',
-    'capricorn',
-    'aquarius',
-    'pisces'
+    'Aries',
+    'Taurus',
+    'Gemini',
+    'Cancer',
+    'Leo',
+    'Virgo',
+    'Libra',
+    'Scorpio',
+    'Sagittarius',
+    'Capricorn',
+    'Aquarius',
+    'Pisces'
   ]
 
   const colors = [
@@ -40,29 +40,29 @@ const Horoscope = () => {
 
   const backgroundColor = (sign) => {
     switch (sign) {
-      case 'aries':
+      case 'Aries':
         return '#cd6d59'
-      case 'taurus':
+      case 'Taurus':
         return '#de8968'
-      case 'gemini':
+      case 'Gemini':
         return '#da8750'
-      case 'cancer':
+      case 'Cancer':
         return '#e2a65c'
-      case 'leo':
+      case 'Leo':
         return '#e5be6a'
-      case 'virgo':
+      case 'Virgo':
         return '#bfa355'
-      case 'libra':
+      case 'Libra':
         return '#9d9d66'
-      case 'scorpio':
+      case 'Scorpio':
         return '#a7a783'
-      case 'sagittarius':
+      case 'Sagittarius':
         return '#acbaa8'
-      case 'capricorn':
+      case 'Capricorn':
         return '#90a1a5'
-      case 'aquarius':
+      case 'Aquarius':
         return '#6a7985'
-      case 'pisces':
+      case 'Pisces':
         return '#384d59'
       default:
         return '#000000'
@@ -71,40 +71,40 @@ const Horoscope = () => {
 
   const signNavigate = (sign) => {
     switch (sign) {
-      case 'aries':
+      case 'Aries':
         navigate(`/signs/64075ea856681f54f39816a6`)
         break
-      case 'taurus':
+      case 'Taurus':
         navigate(`/signs/64075fa956681f54f39816ab`)
         break
-      case 'gemini':
+      case 'Gemini':
         navigate(`/signs/6407600956681f54f39816ad`)
         break
-      case 'cancer':
+      case 'Cancer':
         navigate(`/signs/6407607e56681f54f39816af`)
         break
-      case 'leo':
+      case 'Leo':
         navigate(`/signs/640760f256681f54f39816b1`)
         break
-      case 'virgo':
+      case 'Virgo':
         navigate(`/signs/6407614c56681f54f39816b3`)
         break
-      case 'libra':
+      case 'Libra':
         navigate(`/signs/6407619f56681f54f39816b5`)
         break
-      case 'scorpio':
+      case 'Scorpio':
         navigate(`/signs/640761f456681f54f39816b7`)
         break
-      case 'sagittarius':
+      case 'Sagittarius':
         navigate(`/signs/6407625d56681f54f39816b9`)
         break
-      case 'capricorn':
+      case 'Capricorn':
         navigate(`/signs/640762b456681f54f39816bb`)
         break
-      case 'aquarius':
+      case 'Aquarius':
         navigate(`/signs/6407631c56681f54f39816bd`)
         break
-      case 'pisces':
+      case 'Pisces':
         navigate(`/signs/6407636f56681f54f39816bf`)
         break
       default:
