@@ -1,26 +1,26 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Horoscope = () => {
   let navigate = useNavigate()
-  const [sign, setSign] = useState('Aries')
+  const [sign, setSign] = useState('aries')
   const [horoscope, setHoroscope] = useState({})
   const [modalOpen, setModalOpen] = useState(false)
   const signs = [
-    'Aries',
-    'Taurus',
-    'Gemini',
-    'Cancer',
-    'Leo',
-    'Virgo',
-    'Libra',
-    'Scorpio',
-    'Sagittarius',
-    'Capricorn',
-    'Aquarius',
-    'Pisces'
+    'aries',
+    'taurus',
+    'gemini',
+    'cancer',
+    'leo',
+    'virgo',
+    'libra',
+    'scorpio',
+    'sagittarius',
+    'capricorn',
+    'aquarius',
+    'pisces'
   ]
 
   const colors = [
@@ -40,29 +40,29 @@ const Horoscope = () => {
 
   const backgroundColor = (sign) => {
     switch (sign) {
-      case 'Aries':
+      case 'aries':
         return '#cd6d59'
-      case 'Taurus':
+      case 'taurus':
         return '#de8968'
-      case 'Gemini':
+      case 'gemini':
         return '#da8750'
-      case 'Cancer':
+      case 'cancer':
         return '#e2a65c'
-      case 'Leo':
+      case 'leo':
         return '#e5be6a'
-      case 'Virgo':
+      case 'virgo':
         return '#bfa355'
-      case 'Libra':
+      case 'libra':
         return '#9d9d66'
-      case 'Scorpio':
+      case 'scorpio':
         return '#a7a783'
-      case 'Sagittarius':
+      case 'sagittarius':
         return '#acbaa8'
-      case 'Capricorn':
+      case 'capricorn':
         return '#90a1a5'
-      case 'Aquarius':
+      case 'aquarius':
         return '#6a7985'
-      case 'Pisces':
+      case 'pisces':
         return '#384d59'
       default:
         return '#000000'
@@ -71,40 +71,40 @@ const Horoscope = () => {
 
   const signNavigate = (sign) => {
     switch (sign) {
-      case 'Aries':
+      case 'aries':
         navigate(`/signs/64075ea856681f54f39816a6`)
         break
-      case 'Taurus':
+      case 'taurus':
         navigate(`/signs/64075fa956681f54f39816ab`)
         break
-      case 'Gemini':
+      case 'gemini':
         navigate(`/signs/6407600956681f54f39816ad`)
         break
-      case 'Cancer':
+      case 'cancer':
         navigate(`/signs/6407607e56681f54f39816af`)
         break
-      case 'Leo':
+      case 'leo':
         navigate(`/signs/640760f256681f54f39816b1`)
         break
-      case 'Virgo':
+      case 'virgo':
         navigate(`/signs/6407614c56681f54f39816b3`)
         break
-      case 'Libra':
+      case 'libra':
         navigate(`/signs/6407619f56681f54f39816b5`)
         break
-      case 'Scorpio':
+      case 'scorpio':
         navigate(`/signs/640761f456681f54f39816b7`)
         break
-      case 'Sagittarius':
+      case 'sagittarius':
         navigate(`/signs/6407625d56681f54f39816b9`)
         break
-      case 'Capricorn':
+      case 'capricorn':
         navigate(`/signs/640762b456681f54f39816bb`)
         break
-      case 'Aquarius':
+      case 'aquarius':
         navigate(`/signs/6407631c56681f54f39816bd`)
         break
-      case 'Pisces':
+      case 'pisces':
         navigate(`/signs/6407636f56681f54f39816bf`)
         break
       default:
@@ -113,14 +113,15 @@ const Horoscope = () => {
   }
 
   useEffect(() => {
-    const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=Today`
+    const URL = `https://ohmanda.com/api/horoscope/${sign}`
     axios
-      .post(URL)
+      .get(URL)
       .then((response) => {
         setHoroscope(response.data)
+        console.log(response.data)
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error.response.data)
       })
   }, [sign])
 
@@ -154,7 +155,8 @@ const Horoscope = () => {
               YOUR DAILY {sign.toUpperCase()} HOROSCOPE
             </div>
             <div className="horoscopeDescription">
-              <p>{horoscope.description}</p>
+              {/* <p>{horoscope.description}</p> */}
+              <p>{horoscope.horoscope}</p>
               <button
                 className="dailyHoroscopeButton"
                 onClick={() => signNavigate(sign)}
