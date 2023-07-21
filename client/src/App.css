@@ -8,6 +8,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  scrollbar-width: none;
+}
+
 .homeGrid {
   display: grid;
   grid-template-columns: [first] 25vw [second] 25vw [third] 25vw [fourth] 25vw[last-column];
@@ -262,6 +266,13 @@ body::-webkit-scrollbar {
     background-image: none;
   }
 
+  .headerDrop {
+    margin: -32px 0 0 0;
+    height: 30%;
+    z-index: 99;
+    border-radius: 50px;
+  }
+
   .dropdown {
     grid-column: 1 / span 4;
     grid-row: 2 / span 3;
@@ -274,6 +285,10 @@ body::-webkit-scrollbar {
     width: 100%;
     z-index: 5;
     bottom: -1vh;
+  }
+
+  .headerLink {
+    font-size: 1.2em;
   }
 
   .homeLink {
@@ -592,7 +607,7 @@ body::-webkit-scrollbar {
   grid-column: 3 / span 2;
   grid-row: first / span 4;
   background-color: #f0e6be;
-  overflow-y: auto;
+  overflow-y: overlay;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -607,6 +622,7 @@ body::-webkit-scrollbar {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 0 0 30px 0;
 }
 
 .allCardsDiv {
@@ -616,7 +632,8 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   width: 50%;
-  position: relative
+  position: relative;
+  overflow: overlay
 }
 
 .cardsPageAbout {
@@ -624,6 +641,7 @@ body::-webkit-scrollbar {
   font-size: 5.2em;
   margin: .9em 0 0 0;
   text-align: center;
+  width: 100%;
 }
 
 .searchButton {
@@ -640,6 +658,8 @@ body::-webkit-scrollbar {
   grid-column: 1 / span 1;
   grid-row: second/ span 1;
   text-align: center;
+  padding: 0;
+  overflow: auto
 }
 
 /* ALL CARDS MEDIA QUERY */
@@ -668,6 +688,10 @@ body::-webkit-scrollbar {
     font-size:3em;
     margin: .1em 0 0 0;
     text-align: center;
+}
+
+.aboutContainer {
+  overflow: hidden;
 }
 
 }
@@ -705,7 +729,8 @@ body::-webkit-scrollbar {
   grid-column: 3 / span 2;
   grid-row: first / span 4;
   background-color: #f0e6be;
-  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .cardPageHeader {
@@ -719,7 +744,7 @@ body::-webkit-scrollbar {
   grid-row: 1 / span 1;
   background-color:#90a1a5;
   color:#f0e6be;
-  overflow-y: scroll;
+  /* overflow-y: hidden; */
 }
 
 .cardPageAbout {
@@ -727,6 +752,7 @@ body::-webkit-scrollbar {
   font-size: 5.2em;
   margin: 1.1em 0 0 0;
   text-align: center;
+  width: 100%
 }
 
 .reversedOr {
@@ -848,8 +874,9 @@ body::-webkit-scrollbar {
     grid-row: second / span 3;
     display: grid;
     grid-template-columns: [first] 50vw [last-column];
-    grid-template-rows: [first] 19vh [second] 43vh [third] 6vh [last-row];
-    overflow-y: auto;
+    grid-template-rows: [first] 19vh [second] 44vh [third] 6vh [last-row];
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
   
   .cardPageHeader {
@@ -862,7 +889,7 @@ body::-webkit-scrollbar {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     color:#f0e6be;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
   
   .cardPageAbout {
@@ -912,7 +939,7 @@ body::-webkit-scrollbar {
   .aboutInfo {
     grid-column: 1 / span 1;
     grid-row: 2 / span 2;
-    overflow-y: auto;
+    /* overflow-y: hidden; */
     margin: 0;
     padding: 0;
   }

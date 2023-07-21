@@ -32,7 +32,7 @@ const Signs = () => {
       <div className="pageHeader">
         <Nav />
       </div>
-      <div className="cardsPageInfo">
+      <div className="cardPageInfo">
         <div className="cardPageHeader">
           <div className="aboutContainer">
             <h1 className="cardsPageAbout">STAR SIGNS</h1>
