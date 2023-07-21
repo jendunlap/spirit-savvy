@@ -6,6 +6,16 @@ import Retrograde from '../components/Retrograde'
 import Social from '../components/Social'
 
 const SignInfo = () => {
+  const locale = 'en-US'
+  const options = {
+    month: 'long',
+    day: 'numeric'
+  }
+
+  const dateFormatter = new Intl.DateTimeFormat(locale, options)
+  const currentDate = new Date()
+  const formattedDate = dateFormatter.format(currentDate).toUpperCase()
+
   let { signId } = useParams()
 
   const [signInfo, setSignInfo] = useState(null)
@@ -47,6 +57,13 @@ const SignInfo = () => {
             <h2 className="reverseButton">{signInfo.dates}</h2>
           </div>
           <div className="cardLongDescription">
+            <p className="todaysHoroscope">
+              {signInfo.name.toUpperCase()} HOROSCOPE {formattedDate}
+            </p>
+            <h5 className="pageInfoP">{signInfo.horoscope}</h5>
+            <p className="moreAbout">
+              MORE ABOUT {signInfo.name.toUpperCase()}
+            </p>
             <h5 className="pageInfoP">{signInfo.description1}</h5>
             <h5 className="pageInfoP">{signInfo.description2}</h5>
             <h5 className="pageInfoP">{signInfo.description3}</h5>
