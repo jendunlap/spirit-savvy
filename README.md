@@ -10,13 +10,11 @@
 
 ### **_This Site Was Foreseen_**
 
-Step through a portal into psychic connection! Created for local medium YeYe, this site has everything! From tarot and astrology, to booking and services, to answering the question on everyone's mind: "Is Mercury in Retrograde?"", this is your one stop shop for all things spiritual!
+Step through a portal into psychic connection! Created for local medium YeYe, this site has everything! From tarot and astrology, to booking and services, to answering the question on everyone's mind: "Is Mercury in Retrograde?", this is your one stop shop for all things spiritual!
 
 ---
 
 ### **_Created With_**
-
-![Image](https://i.imgur.com/dN8waHF.png)
 
 - HTML
 - CSS
@@ -31,34 +29,36 @@ Step through a portal into psychic connection! Created for local medium YeYe, th
 ### **_Heavy Homepage Hitters_**
 
 ![Image](https://i.imgur.com/IdmCL66.jpg)
-![Image](https://i.imgur.com/Vuvl4kX.jpg)
 
 Click your sign (or your friend's! Or your enemy's!) to get your daily horoscope utilizing a third party astrology API brought to you by Aztro, or get keywords from your faily tarot pull in one click. Wanna learn more? We got you covered! Don't worry - that retrograde info will follow you wherever you navigate (much like mercury itself)!
+
+![Image](https://i.imgur.com/Vuvl4kX.jpg)
 
 ---
 
 ### **_Your New Fav Tarot Experience_**
 
 ![Image](https://i.imgur.com/IEH1hQj.jpg)
-![Image](https://i.imgur.com/JBpKwo2.jpg)
 
 Learn more about your daily pull or use the search function to find what speaks to you, with easy navigation between cards and the ability to toggle your reading based on upright or reversed presentations, this is your tarot reading go-to!
+
+![Image](https://i.imgur.com/JBpKwo2.jpg)
 
 ---
 
 ### **_Plus, Horoscopes!_**
 
 ![Image](https://i.imgur.com/40TEExE.jpg)
-![Image](https://i.imgur.com/UDwraWX.jpg)
 
 Much like your searchable tarot database, the signs are here if you choose to explore them! Each sign features today's horoscope as well as information regarding that sign.
+
+![Image](https://i.imgur.com/UDwraWX.jpg)
 
 ---
 
 ### **_Services, Reviews and More!_**
 
 ![Image](https://i.imgur.com/WOUxviL.jpg)
-![Image](https://i.imgur.com/RiqQ2Z1.jpg)
 
 This Art Nouveau / Rainbow powerhouse of feminine chaos is consistent across the site, with drop down navigation wherever you go. Don't get lost in space!
 
